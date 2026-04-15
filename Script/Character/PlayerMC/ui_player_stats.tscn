@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl0kon6cwnouk"]
+
+[ext_resource type="Script" uid="uid://ckf6y27wefhec" path="res://Script/Character/PlayerMC/ui_player_stats.gd" id="1_vnw0u"]
+
+[node name="UI_Player_Stats" type="Panel"]
+anchors_preset = -1
+anchor_right = 0.15200001
+anchor_bottom = 0.12900001
+offset_right = -175.104
+offset_bottom = -83.592
+script = ExtResource("1_vnw0u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2

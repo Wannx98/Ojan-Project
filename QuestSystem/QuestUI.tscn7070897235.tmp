@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0up7ewfsp3dq"]
+
+[ext_resource type="Script" uid="uid://bfe3eyap8q0y3" path="res://QuestSystem/QuestUI.gd" id="1_0fjs1"]
+[ext_resource type="Texture2D" uid="uid://bnqqv03eevggy" path="res://Assets/UI quest Panel.png" id="2_62kvi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1enoq"]
+texture = ExtResource("2_62kvi")
+
+[node name="QuestUI" type="CanvasLayer"]
+script = ExtResource("1_0fjs1")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 92.0
+offset_right = -900.0
+offset_bottom = -430.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1enoq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="QuestTitle" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="QuestDescription" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="QuestProgress" type="ProgressBar" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="QuestProgressText" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2

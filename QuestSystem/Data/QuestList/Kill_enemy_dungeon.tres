@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=2 format=3 uid="uid://dyf0nmfijerek"]
+
+[ext_resource type="Script" uid="uid://ckrfshc1cxl8c" path="res://QuestSystem/Data/Quest.gd" id="1_n54jb"]
+
+[resource]
+script = ExtResource("1_n54jb")
+id = "kill_enemy_dungeon"
+title = "Bunuh monster itu!"
+type = "kill"
+target = "CapeMan"
+goal = 5
+next_quest_id = "kalahkan_mr.s"
+metadata/_custom_type_script = "uid://ckrfshc1cxl8c"

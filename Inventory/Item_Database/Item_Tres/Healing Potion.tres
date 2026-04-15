@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemConsumptionPotion" load_steps=3 format=3 uid="uid://8ca2e26mlk84"]
+
+[ext_resource type="Texture2D" uid="uid://brlpk2dlpmtjt" path="res://Assets/Item/Item__29.png" id="1_wxhws"]
+[ext_resource type="Script" uid="uid://br1vmugu1pffw" path="res://Inventory/Item_Database/Item_Tres/Item_Templeate/ItemConsumptionPotion.gd" id="2_ts531"]
+
+[resource]
+script = ExtResource("2_ts531")
+heal_amount = 20
+can_use_when_full = true
+id = "healing_potion"
+display_name = "Healing Potion"
+icon = ExtResource("1_wxhws")
+max_stack = 5
+metadata/_custom_type_script = "uid://br1vmugu1pffw"

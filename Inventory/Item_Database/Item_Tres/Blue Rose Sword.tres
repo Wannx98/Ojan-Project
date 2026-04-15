@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemEquipmentWeapon" load_steps=3 format=3 uid="uid://brvrrfyew2wkp"]
+
+[ext_resource type="Script" uid="uid://dhppujsxhu8tj" path="res://Inventory/Item_Database/Item_Tres/Item_Templeate/ItemEquipmentWeapon.gd" id="1_0uoii"]
+[ext_resource type="Texture2D" uid="uid://bdnlxj2lkyj7w" path="res://Assets/Item/Item__06.png" id="1_pcoci"]
+
+[resource]
+script = ExtResource("1_0uoii")
+stat_modifiers = {
+"attack_speed": 0.2,
+"base_attack": 50
+}
+id = "blue_rose_sword"
+display_name = "Blue Rose Sword"
+icon = ExtResource("1_pcoci")
+max_stack = 1
+item_type = "equipment"
+metadata/_custom_type_script = "uid://dhppujsxhu8tj"

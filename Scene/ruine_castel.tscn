@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://bh88a3qikelv1"]
+
+[ext_resource type="Texture2D" uid="uid://bcckj6vuobj4f" path="res://Assets/Old_Castle.png" id="2_qqcph"]
+[ext_resource type="Script" uid="uid://bd7qctj0vd1sc" path="res://Script/Pintu-pintu/pintu_balik_ke_town.gd" id="3_qqcph"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3upix"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_evref"]
+normal = Vector2(-1, 0)
+distance = -2.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ccxu7"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aankt"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cqw5h"]
+distance = 29.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6376"]
+size = Vector2(58.5, 75)
+
+[node name="Ruine_castel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(275, -11)
+scale = Vector2(0.1932614, 0.1932614)
+texture = ExtResource("2_qqcph")
+
+[node name="World Border" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_3upix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Border"]
+position = Vector2(575, -24)
+shape = SubResource("WorldBoundaryShape2D_evref")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World Border"]
+position = Vector2(-2, -323)
+shape = SubResource("WorldBoundaryShape2D_ccxu7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World Border"]
+position = Vector2(-577, -12)
+shape = SubResource("WorldBoundaryShape2D_aankt")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World Border"]
+position = Vector2(-2, 351)
+shape = SubResource("WorldBoundaryShape2D_cqw5h")
+
+[node name="Pintu balik ke town" type="Area2D" parent="."]
+script = ExtResource("3_qqcph")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pintu balik ke town"]
+position = Vector2(-549.25, -8.5)
+shape = SubResource("RectangleShape2D_t6376")
+
+[connection signal="body_entered" from="Pintu balik ke town" to="Pintu balik ke town" method="_on_body_entered"]
+[connection signal="body_exited" from="Pintu balik ke town" to="Pintu balik ke town" method="_on_body_exited"]

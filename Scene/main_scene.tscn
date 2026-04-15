@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=3 uid="uid://bv1hcncvk0c25"]
+
+[ext_resource type="PackedScene" uid="uid://cdryc1kkf7kc1" path="res://Script/Character/PlayerMC/player_mc.tscn" id="1_j4qrl"]
+[ext_resource type="Script" uid="uid://e3pg0dfvnfoo" path="res://Script/Main_Scene_Script/main_scene.gd" id="1_lttqn"]
+[ext_resource type="PackedScene" uid="uid://cm3e3w7q3s0xl" path="res://DialogUI/dialog_ui.tscn" id="3_i64o6"]
+[ext_resource type="Script" uid="uid://0ei53s1glvpa" path="res://Script/Character/GlobalCharacterStats.gd" id="3_lee88"]
+[ext_resource type="Texture2D" uid="uid://cga5um6mfmjuc" path="res://Assets/HP low.png" id="3_lttqn"]
+[ext_resource type="Texture2D" uid="uid://c815rijn0qwvn" path="res://Assets/HP full.png" id="4_lee88"]
+[ext_resource type="PackedScene" uid="uid://bc1u4e6rs4ghk" path="res://Inventory/InventoryUI/inventory_scene.tscn" id="6_1d8q1"]
+[ext_resource type="PackedScene" uid="uid://c0up7ewfsp3dq" path="res://QuestSystem/QuestUI/QuestUI.tscn" id="6_i64o6"]
+[ext_resource type="PackedScene" uid="uid://b424va6ioofdl" path="res://QuestSystem/quest_manager.tscn" id="6_k2rys"]
+
+[sub_resource type="Resource" id="Resource_1d8q1"]
+script = ExtResource("3_lee88")
+movement_speed = 150.0
+metadata/_custom_type_script = "uid://0ei53s1glvpa"
+
+[sub_resource type="Animation" id="Animation_lee88"]
+resource_name = "Fade in"
+
+[sub_resource type="Animation" id="Animation_1d8q1"]
+resource_name = "fade out"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2rys"]
+_data = {
+&"Fade in": SubResource("Animation_lee88"),
+&"fade out": SubResource("Animation_1d8q1")
+}
+
+[node name="Main Scene" type="Node2D"]
+script = ExtResource("1_lttqn")
+
+[node name="QuestUI" parent="." instance=ExtResource("6_i64o6")]
+layer = 4
+
+[node name="DialogUI" parent="." instance=ExtResource("3_i64o6")]
+
+[node name="PlayerMC" parent="." instance=ExtResource("1_j4qrl")]
+position = Vector2(169, 15)
+player_stats = SubResource("Resource_1d8q1")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerMC"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="MapHolder" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HP bar" type="TextureProgressBar" parent="CanvasLayer/HUD"]
+layout_mode = 1
+offset_top = 2.0
+offset_right = 520.0
+offset_bottom = 282.0
+value = 100.0
+texture_under = ExtResource("3_lttqn")
+texture_progress = ExtResource("4_lee88")
+metadata/_edit_lock_ = true
+
+[node name="Manager" type="Node" parent="CanvasLayer"]
+
+[node name="QuestManager" parent="CanvasLayer/Manager" instance=ExtResource("6_k2rys")]
+
+[node name="Save Manager" type="Node" parent="CanvasLayer/Manager"]
+
+[node name="Inventory" parent="CanvasLayer/Manager" instance=ExtResource("6_1d8q1")]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="Screen Transision" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Screen Transision"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Screen Transision"]
+libraries = {
+&"": SubResource("AnimationLibrary_k2rys")
+}

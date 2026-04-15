@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ItemEquipmentRing" load_steps=2 format=3 uid="uid://crm5i0dx8exm3"]
+
+[ext_resource type="Script" uid="uid://ciuyc8r1a1g8f" path="res://Inventory/Item_Database/Item_Tres/Item_Templeate/ItemEquipmentRing.gd" id="1_4nwo1"]
+
+[resource]
+script = ExtResource("1_4nwo1")
+metadata/_custom_type_script = "uid://ciuyc8r1a1g8f"

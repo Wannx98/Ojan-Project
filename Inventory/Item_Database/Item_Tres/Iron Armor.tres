@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemEquipmentArmor" load_steps=3 format=3 uid="uid://ci114kbf5fatd"]
+
+[ext_resource type="Script" uid="uid://da0firiciytu6" path="res://Inventory/Item_Database/Item_Tres/Item_Templeate/ItemEquipmentArmor.gd" id="1_odpns"]
+[ext_resource type="Texture2D" uid="uid://bip4bcwu3dvbg" path="res://Assets/Item/Item__57.png" id="1_t8c5x"]
+
+[resource]
+script = ExtResource("1_odpns")
+slot = 1
+id = "iron_armor"
+display_name = "Iron Armor"
+icon = ExtResource("1_t8c5x")
+max_stack = 1
+metadata/_custom_type_script = "uid://da0firiciytu6"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=2 format=3 uid="uid://iinjkgtmqgtg"]
+
+[ext_resource type="Script" uid="uid://ckrfshc1cxl8c" path="res://QuestSystem/Data/Quest.gd" id="1_7nq5y"]
+
+[resource]
+script = ExtResource("1_7nq5y")
+id = "talk_bartender"
+title = "Temui Bartender"
+description = "Cari tau apa yang terjadi"
+type = "talk"
+target = "bartender_npc"
+next_quest_id = "kill_enemy_dungeon"
+metadata/_custom_type_script = "uid://ckrfshc1cxl8c"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=2 format=3 uid="uid://c7l4lnree77y6"]
+
+[ext_resource type="Script" uid="uid://ckrfshc1cxl8c" path="res://QuestSystem/Data/Quest.gd" id="1_yivkc"]
+
+[resource]
+script = ExtResource("1_yivkc")
+id = "kalahkan_mr.s"
+title = "Kalahkan Mr.S"
+description = "Selamatkan tuan Putri dengan mengalahkan Mr.S"
+type = "kill"
+target = "Mr.S"
+metadata/_custom_type_script = "uid://ckrfshc1cxl8c"

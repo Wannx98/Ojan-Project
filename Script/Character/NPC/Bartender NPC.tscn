@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://b2at8jy6uo246"]
+
+[ext_resource type="Texture2D" uid="uid://dvhpowanf4spy" path="res://Assets/Bartender_chara.png" id="1_2nx00"]
+[ext_resource type="Script" uid="uid://8w758pnb7ocx" path="res://Script/Character/NPC/Bartender.gd" id="1_8ctxc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ctxc"]
+atlas = ExtResource("1_2nx00")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nx00"]
+atlas = ExtResource("1_2nx00")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oda3c"]
+atlas = ExtResource("1_2nx00")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6qv2"]
+atlas = ExtResource("1_2nx00")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wjao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ctxc")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_2nx00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oda3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6qv2")
+}],
+"loop": true,
+"name": &"speak",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oda3c"]
+radius = 13.0
+height = 98.0
+
+[node name="Bartender" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="." groups=["npc"]]
+position = Vector2(3, 2)
+script = ExtResource("1_8ctxc")
+dialog_lines = Array[String](["Halo, selamat datang di bar", "kamu petualang ya ", "aku dengar ada sayembara untuk menyelamatkan tuan putri yang di culik ", "katanya dia di culik oleh gerombolanya Mr.S", "kau tau kan Mr.S yang.....", "ya pokoknya itu lah", "kamu pengembara kan?...pasti butuh uang, kamu bisa pergi menyelamatkan tuan putri  untuk mendapatkan hadiahnya ", "kudengar persembunyian Mr.S ada di dalam pertambangan dekat perkebunan pak ical", "hati hati ya bung!!"])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(-1, -8)
+sprite_frames = SubResource("SpriteFrames_5wjao")
+animation = &"speak"
+frame_progress = 0.8269716
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 33)
+shape = SubResource("CapsuleShape2D_oda3c")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
