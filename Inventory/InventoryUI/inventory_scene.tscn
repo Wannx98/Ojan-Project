@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc1u4e6rs4ghk"]
+[gd_scene format=3 uid="uid://bc1u4e6rs4ghk"]
 
 [ext_resource type="Texture2D" uid="uid://ckdi2cgalunej" path="res://Assets/Inventory_style_02a.png" id="1_jf4nj"]
 [ext_resource type="Script" uid="uid://b7o506a1qmmva" path="res://Inventory/InventoryUI/UI_inventory.gd" id="1_ww8vw"]
@@ -9,10 +9,10 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ww8vw"]
 texture = ExtResource("2_hfqhc")
 
-[node name="Inventory" type="Node2D"]
+[node name="Inventory" type="Node2D" unique_id=767026502]
 script = ExtResource("1_ww8vw")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1863841721]
 offset_left = 164.0
 offset_top = 264.0
 offset_right = 557.6
@@ -20,7 +20,7 @@ offset_bottom = 494.0
 mouse_filter = 2
 texture = ExtResource("1_jf4nj")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1317128229]
 offset_left = 323.0
 offset_top = 276.0
 offset_right = 546.0
@@ -30,7 +30,7 @@ theme_override_constants/h_separation = -1
 theme_override_constants/v_separation = -1
 columns = 6
 
-[node name="Panel" type="Panel" parent="GridContainer"]
+[node name="Panel" type="Panel" parent="GridContainer" unique_id=1340989829]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_behavior_recursive = 2
@@ -38,44 +38,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel" unique_id=775104081]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel"]
+[node name="Count" type="Label" parent="GridContainer/Panel" unique_id=1008633958]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel2" type="Panel" parent="GridContainer"]
-custom_minimum_size = Vector2(38.8, 38.3)
-layout_mode = 2
-mouse_filter = 1
-mouse_behavior_recursive = 2
-mouse_default_cursor_shape = 7
-theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
-script = ExtResource("3_hfqhc")
-
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel2"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 37.0
-offset_bottom = 36.0
-
-[node name="Count" type="Label" parent="GridContainer/Panel2"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 8.0
-offset_right = 40.0
-offset_bottom = 31.0
-
-[node name="Panel3" type="Panel" parent="GridContainer"]
+[node name="Panel2" type="Panel" parent="GridContainer" unique_id=521290207]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -84,21 +61,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel3"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel2" unique_id=1282760676]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel3"]
+[node name="Count" type="Label" parent="GridContainer/Panel2" unique_id=527623147]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel4" type="Panel" parent="GridContainer"]
+[node name="Panel3" type="Panel" parent="GridContainer" unique_id=261454611]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -107,21 +84,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel4"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel3" unique_id=1848377647]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel4"]
+[node name="Count" type="Label" parent="GridContainer/Panel3" unique_id=235735246]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel5" type="Panel" parent="GridContainer"]
+[node name="Panel4" type="Panel" parent="GridContainer" unique_id=399835562]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -130,21 +107,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel5"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel4" unique_id=223163934]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel5"]
+[node name="Count" type="Label" parent="GridContainer/Panel4" unique_id=326979144]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel6" type="Panel" parent="GridContainer"]
+[node name="Panel5" type="Panel" parent="GridContainer" unique_id=1825705405]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -153,21 +130,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel6"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel5" unique_id=1960997790]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel6"]
+[node name="Count" type="Label" parent="GridContainer/Panel5" unique_id=1205362074]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel7" type="Panel" parent="GridContainer"]
+[node name="Panel6" type="Panel" parent="GridContainer" unique_id=165231027]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -176,21 +153,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel7"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel6" unique_id=1590325848]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel7"]
+[node name="Count" type="Label" parent="GridContainer/Panel6" unique_id=1093771145]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel8" type="Panel" parent="GridContainer"]
+[node name="Panel7" type="Panel" parent="GridContainer" unique_id=1152282717]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -199,21 +176,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel8"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel7" unique_id=1884509285]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel8"]
+[node name="Count" type="Label" parent="GridContainer/Panel7" unique_id=129042665]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel9" type="Panel" parent="GridContainer"]
+[node name="Panel8" type="Panel" parent="GridContainer" unique_id=459815081]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -222,21 +199,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel9"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel8" unique_id=1513143132]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel9"]
+[node name="Count" type="Label" parent="GridContainer/Panel8" unique_id=1289955894]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel10" type="Panel" parent="GridContainer"]
+[node name="Panel9" type="Panel" parent="GridContainer" unique_id=1545141975]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -245,21 +222,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel10"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel9" unique_id=878632627]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel10"]
+[node name="Count" type="Label" parent="GridContainer/Panel9" unique_id=689623544]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel11" type="Panel" parent="GridContainer"]
+[node name="Panel10" type="Panel" parent="GridContainer" unique_id=1942901399]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -268,21 +245,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel11"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel10" unique_id=1195998003]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel11"]
+[node name="Count" type="Label" parent="GridContainer/Panel10" unique_id=1563838217]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel12" type="Panel" parent="GridContainer"]
+[node name="Panel11" type="Panel" parent="GridContainer" unique_id=507866724]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -291,21 +268,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel12"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel11" unique_id=1824651368]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel12"]
+[node name="Count" type="Label" parent="GridContainer/Panel11" unique_id=1491745036]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel13" type="Panel" parent="GridContainer"]
+[node name="Panel12" type="Panel" parent="GridContainer" unique_id=1873513157]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -314,21 +291,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel13"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel12" unique_id=1085323329]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel13"]
+[node name="Count" type="Label" parent="GridContainer/Panel12" unique_id=311466097]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel14" type="Panel" parent="GridContainer"]
+[node name="Panel13" type="Panel" parent="GridContainer" unique_id=1593730676]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -337,21 +314,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel14"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel13" unique_id=1585923526]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel14"]
+[node name="Count" type="Label" parent="GridContainer/Panel13" unique_id=1486208247]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel15" type="Panel" parent="GridContainer"]
+[node name="Panel14" type="Panel" parent="GridContainer" unique_id=1632436016]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -360,21 +337,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel15"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel14" unique_id=1787983081]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel15"]
+[node name="Count" type="Label" parent="GridContainer/Panel14" unique_id=1605814791]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel16" type="Panel" parent="GridContainer"]
+[node name="Panel15" type="Panel" parent="GridContainer" unique_id=1304455552]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -383,21 +360,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel16"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel15" unique_id=878728424]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel16"]
+[node name="Count" type="Label" parent="GridContainer/Panel15" unique_id=397247584]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel17" type="Panel" parent="GridContainer"]
+[node name="Panel16" type="Panel" parent="GridContainer" unique_id=1128854387]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -406,21 +383,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel17"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel16" unique_id=892400042]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel17"]
+[node name="Count" type="Label" parent="GridContainer/Panel16" unique_id=703522036]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel18" type="Panel" parent="GridContainer"]
+[node name="Panel17" type="Panel" parent="GridContainer" unique_id=1444583918]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -429,21 +406,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel18"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel17" unique_id=215443506]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel18"]
+[node name="Count" type="Label" parent="GridContainer/Panel17" unique_id=1596968156]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel19" type="Panel" parent="GridContainer"]
+[node name="Panel18" type="Panel" parent="GridContainer" unique_id=964568775]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -452,21 +429,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel19"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel18" unique_id=1220196893]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel19"]
+[node name="Count" type="Label" parent="GridContainer/Panel18" unique_id=43307371]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel20" type="Panel" parent="GridContainer"]
+[node name="Panel19" type="Panel" parent="GridContainer" unique_id=232902472]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -475,21 +452,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel20"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel19" unique_id=767778739]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel20"]
+[node name="Count" type="Label" parent="GridContainer/Panel19" unique_id=2083397918]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel21" type="Panel" parent="GridContainer"]
+[node name="Panel20" type="Panel" parent="GridContainer" unique_id=1640985666]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -498,21 +475,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel21"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel20" unique_id=1584355073]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel21"]
+[node name="Count" type="Label" parent="GridContainer/Panel20" unique_id=1897170235]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel22" type="Panel" parent="GridContainer"]
+[node name="Panel21" type="Panel" parent="GridContainer" unique_id=1391253685]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -521,21 +498,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel22"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel21" unique_id=580081439]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel22"]
+[node name="Count" type="Label" parent="GridContainer/Panel21" unique_id=313612030]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel23" type="Panel" parent="GridContainer"]
+[node name="Panel22" type="Panel" parent="GridContainer" unique_id=1857829487]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -544,21 +521,21 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel23"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel22" unique_id=834962400]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel23"]
+[node name="Count" type="Label" parent="GridContainer/Panel22" unique_id=1231271857]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="Panel24" type="Panel" parent="GridContainer"]
+[node name="Panel23" type="Panel" parent="GridContainer" unique_id=1572343537]
 custom_minimum_size = Vector2(38.8, 38.3)
 layout_mode = 2
 mouse_filter = 1
@@ -567,21 +544,44 @@ mouse_default_cursor_shape = 7
 theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
 script = ExtResource("3_hfqhc")
 
-[node name="Icon" type="TextureRect" parent="GridContainer/Panel24"]
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel23" unique_id=726541497]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 37.0
 offset_bottom = 36.0
 
-[node name="Count" type="Label" parent="GridContainer/Panel24"]
+[node name="Count" type="Label" parent="GridContainer/Panel23" unique_id=440729098]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 40.0
 offset_bottom = 31.0
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Panel24" type="Panel" parent="GridContainer" unique_id=69063496]
+custom_minimum_size = Vector2(38.8, 38.3)
+layout_mode = 2
+mouse_filter = 1
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 7
+theme_override_styles/panel = SubResource("StyleBoxTexture_ww8vw")
+script = ExtResource("3_hfqhc")
+
+[node name="Icon" type="TextureRect" parent="GridContainer/Panel24" unique_id=1221437042]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 37.0
+offset_bottom = 36.0
+
+[node name="Count" type="Label" parent="GridContainer/Panel24" unique_id=135303218]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 31.0
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=392998558]
 offset_left = 180.0
 offset_top = 279.0
 offset_right = 210.0
@@ -589,14 +589,14 @@ offset_bottom = 309.0
 script = ExtResource("5_1ve3x")
 slot_type = 2
 
-[node name="Icon" type="TextureRect" parent="TextureButton"]
+[node name="Icon" type="TextureRect" parent="TextureButton" unique_id=1127657769]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 1.0
 offset_right = 30.0
 offset_bottom = 32.0
 
-[node name="TextureButton2" type="TextureButton" parent="."]
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=1542872748]
 offset_left = 180.0
 offset_top = 317.0
 offset_right = 210.0
@@ -604,13 +604,13 @@ offset_bottom = 347.0
 script = ExtResource("5_1ve3x")
 slot_type = 1
 
-[node name="Icon" type="TextureRect" parent="TextureButton2"]
+[node name="Icon" type="TextureRect" parent="TextureButton2" unique_id=975831332]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 30.0
 offset_bottom = 31.0
 
-[node name="TextureButton3" type="TextureButton" parent="."]
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=1707720927]
 offset_left = 181.0
 offset_top = 355.0
 offset_right = 211.0
@@ -618,14 +618,14 @@ offset_bottom = 385.0
 script = ExtResource("5_1ve3x")
 slot_type = 4
 
-[node name="Icon" type="TextureRect" parent="TextureButton3"]
+[node name="Icon" type="TextureRect" parent="TextureButton3" unique_id=224009998]
 layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0
 offset_right = 30.0
 offset_bottom = 30.0
 
-[node name="TextureButton4" type="TextureButton" parent="."]
+[node name="TextureButton4" type="TextureButton" parent="." unique_id=2093987414]
 offset_left = 274.0
 offset_top = 280.0
 offset_right = 304.0
@@ -633,25 +633,25 @@ offset_bottom = 310.0
 script = ExtResource("5_1ve3x")
 slot_type = 5
 
-[node name="Icon" type="TextureRect" parent="TextureButton4"]
+[node name="Icon" type="TextureRect" parent="TextureButton4" unique_id=134427966]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 30.0
 offset_bottom = 31.0
 
-[node name="TextureButton5" type="TextureButton" parent="."]
+[node name="TextureButton5" type="TextureButton" parent="." unique_id=1281000460]
 offset_left = 273.0
 offset_top = 317.0
 offset_right = 303.0
 offset_bottom = 347.0
 script = ExtResource("5_1ve3x")
 
-[node name="Icon" type="TextureRect" parent="TextureButton5"]
+[node name="Icon" type="TextureRect" parent="TextureButton5" unique_id=39371469]
 layout_mode = 0
 offset_right = 31.0
 offset_bottom = 31.0
 
-[node name="TextureButton6" type="TextureButton" parent="."]
+[node name="TextureButton6" type="TextureButton" parent="." unique_id=1638210149]
 offset_left = 274.0
 offset_top = 354.0
 offset_right = 304.0
@@ -659,25 +659,25 @@ offset_bottom = 384.0
 script = ExtResource("5_1ve3x")
 slot_type = 3
 
-[node name="Icon" type="TextureRect" parent="TextureButton6"]
+[node name="Icon" type="TextureRect" parent="TextureButton6" unique_id=262888355]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 30.0
 offset_bottom = 31.0
 
-[node name="PlayerStatsUI" type="Node" parent="."]
+[node name="PlayerStatsUI" type="Node" parent="." unique_id=2111272931]
 
-[node name="Panel" type="VBoxContainer" parent="PlayerStatsUI"]
+[node name="Panel" type="VBoxContainer" parent="PlayerStatsUI" unique_id=158022553]
 offset_left = 180.0
 offset_top = 391.0
 offset_right = 214.0
 offset_bottom = 425.0
 
-[node name="Label" type="Label" parent="PlayerStatsUI/Panel"]
+[node name="Label" type="Label" parent="PlayerStatsUI/Panel" unique_id=735444408]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="PlayerStatsUI/Panel"]
+[node name="Label2" type="Label" parent="PlayerStatsUI/Panel" unique_id=1767782513]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="PlayerStatsUI/Panel"]
+[node name="Label3" type="Label" parent="PlayerStatsUI/Panel" unique_id=65248788]
 layout_mode = 2
