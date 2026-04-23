@@ -8,7 +8,7 @@ extends CharacterBody2D
 
 var is_attacking = false
 var attack_dir := Vector2.ZERO
-var attack_cooldown := 0.35
+var attack_cooldown := 0.50
 var last_facing_dir := Vector2.DOWN
 
 # ===========================
