@@ -5642,10 +5642,17 @@ distance = -908.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_thj8p"]
 size = Vector2(46, 32)
 
+<<<<<<< HEAD
 [node name="bar area" type="Node2D" unique_id=1221222852]
 position = Vector2(1, 8)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=72803326]
+=======
+[node name="bar area" type="Node2D" unique_id=1046358106]
+position = Vector2(1, 8)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=919239112]
+>>>>>>> origin/Player
 position = Vector2(-1, -2)
 tile_set = SubResource("TileSet_sagxc")
 format = 2
@@ -5717,53 +5724,54 @@ layer_22/name = "printilan sawah"
 layer_22/z_index = 16
 layer_22/tile_data = PackedInt32Array(-2752472, 327705, 1, -2686936, 262169, 1, -2621400, 262169, 3, -2555864, 262169, 5, -2686933, 262169, 1, -2555858, 262169, 1, -2686927, 262169, 1, -2621394, 262169, 3, -2752463, 262169, 3, -2490328, 327705, 3, -2621397, 327705, 3, -2490319, 327705, 3, -2752469, 327705, 5, -2686930, 327705, 5, -2555861, 327705, 5, -2555855, 327705, 5, -2490325, 196633, 9, -2752466, 196633, 9, -2621391, 196633, 9, -2490322, 196633, 9, -2883545, 655385, 0, -2818009, 655385, 1, -2883546, 655385, 2, -2818010, 655385, 3, -2752468, 983065, 2, -2686932, 983065, 3, -2621396, 983065, 4, -2752467, 1048601, 2, -2686931, 1048601, 3, -2621395, 1048601, 4, -3145678, 1507353, 1, -3080142, 1507353, 2, -3014606, 1507353, 3, -3014608, 655385, 8, -2949072, 655385, 9, -3014607, 655385, 12, -2949071, 655385, 13, -3014617, 655385, 6, -2949081, 655385, 7, -3014616, 655385, 4, -2949080, 655385, 5, -2424793, 1114137, 4, -2424792, 1179673, 4, -2424791, 1245209, 4, -2424790, 1245209, 4, -2424789, 1245209, 4, -2424788, 1245209, 4, -2424787, 1245209, 4, -2424786, 1245209, 4, -2424785, 1245209, 4, -2424784, 1245209, 4, -2424783, 1310745, 4, -2424782, 1376281, 4, -2752471, 1441817, 8, -2621398, 1572889, 8, -2490320, 1572889, 8, -2752465, 1507353, 8, -3080139, 65562, 11, -2621378, 27, 0, -2752456, 26, 1)
 
-[node name="World Border" type="StaticBody2D" parent="." unique_id=407199617]
+[node name="World Border" type="StaticBody2D" parent="." unique_id=1712785099]
 position = Vector2(0, -1)
 physics_material_override = SubResource("PhysicsMaterial_mhtsl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World Border" unique_id=1643887715]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Border" unique_id=1369885621]
 position = Vector2(1087, -3)
 shape = SubResource("WorldBoundaryShape2D_w51g1")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="World Border" unique_id=1752365066]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World Border" unique_id=2052168238]
 position = Vector2(-2, -323)
 shape = SubResource("WorldBoundaryShape2D_4jv7b")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="World Border" unique_id=715673080]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World Border" unique_id=206928083]
 position = Vector2(-577, -12)
 shape = SubResource("WorldBoundaryShape2D_03iqk")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="World Border" unique_id=1915588897]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World Border" unique_id=867092609]
 position = Vector2(-2, 351)
 shape = SubResource("WorldBoundaryShape2D_ihreq")
 
-[node name="Pintu bar" type="Area2D" parent="." unique_id=1806644199]
+[node name="Pintu bar" type="Area2D" parent="." unique_id=491011096]
 position = Vector2(0, 9.536743e-07)
 script = ExtResource("8_bcr6c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pintu bar" unique_id=225361522]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pintu bar" unique_id=80771483]
 position = Vector2(-470, -152)
 shape = SubResource("RectangleShape2D_thj8p")
 
-[node name="Gate Tambang" type="Area2D" parent="." unique_id=2052583253]
+[node name="Gate Tambang" type="Area2D" parent="." unique_id=154824550]
 position = Vector2(1004, -820)
 script = ExtResource("9_6umww")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gate Tambang" unique_id=1487476416]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gate Tambang" unique_id=1728415430]
 position = Vector2(-5, 6)
 shape = SubResource("RectangleShape2D_thj8p")
 
-[node name="spawnawal" type="Node2D" parent="." unique_id=281391399]
+[node name="spawnawal" type="Node2D" parent="." unique_id=205905357]
 position = Vector2(461, -25)
 
-[node name="spawnbalikdanjen" type="Node2D" parent="." unique_id=26673106]
+[node name="spawnbalikdanjen" type="Node2D" parent="." unique_id=160194221]
 position = Vector2(1002, -761)
 
-[node name="luarbarspawn" type="Node2D" parent="." unique_id=535598284]
+[node name="luarbarspawn" type="Node2D" parent="." unique_id=696670820]
 position = Vector2(-456, -127)
 
 [node name="ItemDrop" parent="." unique_id=882311792 instance=ExtResource("30_0iypy")]
-position = Vector2(296, -56)
+position = Vector2(276, -53)
+
 
 [connection signal="body_entered" from="Pintu bar" to="Pintu bar" method="_on_body_entered"]
 [connection signal="body_exited" from="Pintu bar" to="Pintu bar" method="_on_body_exited"]
