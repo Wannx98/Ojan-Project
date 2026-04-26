@@ -41,7 +41,7 @@ func _ready():
 # INPUT
 # ===========================
 func _input(event):
-	if event.is_action_pressed("debug_inv"):
+	if event.is_action_pressed("Inventory"):
 		debug_inventory()
 
 # ===========================

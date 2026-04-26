@@ -23,7 +23,6 @@ config/icon="res://icon.svg"
 
 Quest_Manager="*res://QuestSystem/quest_manager.gd"
 Item_database="*res://Inventory/Item_Database/Item_database.gd"
-InventorySys="*res://Inventory/Item_Database/InventorySys.gd"
 DialogUi="*res://DialogUI/dialog_ui.gd"
 
 [global_group]
