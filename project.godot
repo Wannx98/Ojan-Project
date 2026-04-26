@@ -16,15 +16,16 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Gamekudukuntul Map Update Ver. 5,7 1"
 run/main_scene="uid://bv1hcncvk0c25"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Quest_Manager="*res://QuestSystem/quest_manager.gd"
 Item_database="*res://Inventory/Item_Database/Item_database.gd"
-InventorySys="*res://Inventory/Item_Database/InventorySys.gd"
 DialogUi="*res://DialogUI/dialog_ui.gd"
+InventorySys="*res://Inventory/Item_Database/InventorySys.gd"
+GenerateCaveSystem="*uid://3mr17xdp63wr"
 
 [global_group]
 

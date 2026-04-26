@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bv1hcncvk0c25"]
+[gd_scene format=3 uid="uid://bv1hcncvk0c25"]
 
 [ext_resource type="PackedScene" uid="uid://cdryc1kkf7kc1" path="res://Script/Character/PlayerMC/player_mc.tscn" id="1_j4qrl"]
 [ext_resource type="Script" uid="uid://e3pg0dfvnfoo" path="res://Script/Main_Scene_Script/main_scene.gd" id="1_lttqn"]
@@ -27,32 +27,32 @@ _data = {
 &"fade out": SubResource("Animation_1d8q1")
 }
 
-[node name="Main Scene" type="Node2D"]
+[node name="Main Scene" type="Node2D" unique_id=1234575208]
 script = ExtResource("1_lttqn")
 
-[node name="QuestUI" parent="." instance=ExtResource("6_i64o6")]
+[node name="QuestUI" parent="." unique_id=300563288 instance=ExtResource("6_i64o6")]
 layer = 4
 
-[node name="DialogUI" parent="." instance=ExtResource("3_i64o6")]
+[node name="DialogUI" parent="." unique_id=500465986 instance=ExtResource("3_i64o6")]
 
-[node name="PlayerMC" parent="." instance=ExtResource("1_j4qrl")]
+[node name="PlayerMC" parent="." unique_id=1945019582 instance=ExtResource("1_j4qrl")]
 position = Vector2(169, 15)
 player_stats = SubResource("Resource_1d8q1")
 
-[node name="Camera2D" type="Camera2D" parent="PlayerMC"]
+[node name="Camera2D" type="Camera2D" parent="PlayerMC" unique_id=1201981030]
 zoom = Vector2(1.5, 1.5)
 
-[node name="MapHolder" type="Node2D" parent="."]
+[node name="MapHolder" type="Node2D" parent="." unique_id=271647642]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=328635053]
 
-[node name="HUD" type="Control" parent="CanvasLayer"]
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1489848976]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HP bar" type="TextureProgressBar" parent="CanvasLayer/HUD"]
+[node name="HP bar" type="TextureProgressBar" parent="CanvasLayer/HUD" unique_id=740127868]
 layout_mode = 1
 offset_top = 2.0
 offset_right = 520.0
@@ -62,19 +62,19 @@ texture_under = ExtResource("3_lttqn")
 texture_progress = ExtResource("4_lee88")
 metadata/_edit_lock_ = true
 
-[node name="Manager" type="Node" parent="CanvasLayer"]
+[node name="Manager" type="Node" parent="CanvasLayer" unique_id=661399426]
 
-[node name="QuestManager" parent="CanvasLayer/Manager" instance=ExtResource("6_k2rys")]
+[node name="QuestManager" parent="CanvasLayer/Manager" unique_id=184403110 instance=ExtResource("6_k2rys")]
 
-[node name="Save Manager" type="Node" parent="CanvasLayer/Manager"]
+[node name="Save Manager" type="Node" parent="CanvasLayer/Manager" unique_id=2113162857]
 
-[node name="Inventory" parent="CanvasLayer/Manager" instance=ExtResource("6_1d8q1")]
+[node name="Inventory" parent="CanvasLayer/Manager" unique_id=749259993 instance=ExtResource("6_1d8q1")]
 visible = false
 metadata/_edit_lock_ = true
 
-[node name="Screen Transision" type="Node" parent="."]
+[node name="Screen Transision" type="Node" parent="." unique_id=2115246266]
 
-[node name="ColorRect" type="ColorRect" parent="Screen Transision"]
+[node name="ColorRect" type="ColorRect" parent="Screen Transision" unique_id=271142800]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,7 +84,5 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Screen Transision"]
-libraries = {
-&"": SubResource("AnimationLibrary_k2rys")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Screen Transision" unique_id=440485695]
+libraries/ = SubResource("AnimationLibrary_k2rys")

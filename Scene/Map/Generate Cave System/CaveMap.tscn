@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bvsi54etbgy3k"]
+
+[ext_resource type="Script" uid="uid://d1xal6u1f7ged" path="res://Scene/Map/Generate Cave System/cave_map_sceneController.gd" id="1_pcja3"]
+[ext_resource type="Script" uid="uid://ckgg3c6sva6bo" path="res://Scene/Map/Generate Cave System/CaveRender.gd" id="2_on33b"]
+
+[node name="CaveMap" type="Node2D" unique_id=2146544743]
+script = ExtResource("1_pcja3")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=829115823]
+format = 2
+script = ExtResource("2_on33b")
