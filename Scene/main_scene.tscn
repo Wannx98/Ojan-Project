@@ -47,12 +47,15 @@ zoom = Vector2(1.5, 1.5)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1031513953]
 
 [node name="HUD" type="Control" parent="CanvasLayer" unique_id=1171974015]
+
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+
 [node name="HP bar" type="TextureProgressBar" parent="CanvasLayer/HUD" unique_id=1317980087]
+
 layout_mode = 1
 offset_top = 2.0
 offset_right = 520.0
@@ -61,6 +64,7 @@ value = 100.0
 texture_under = ExtResource("3_lttqn")
 texture_progress = ExtResource("4_lee88")
 metadata/_edit_lock_ = true
+
 
 [node name="Manager" type="Node" parent="CanvasLayer" unique_id=1022303408]
 
@@ -75,6 +79,7 @@ metadata/_edit_lock_ = true
 [node name="Screen Transision" type="Node" parent="." unique_id=1872146248]
 
 [node name="ColorRect" type="ColorRect" parent="Screen Transision" unique_id=1356934057]
+
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,5 +89,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Screen Transision" unique_id=298170407]
+
 libraries/ = SubResource("AnimationLibrary_k2rys")
