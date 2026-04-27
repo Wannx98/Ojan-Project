@@ -1,11 +1,33 @@
 [gd_scene format=3 uid="uid://bvsi54etbgy3k"]
 
 [ext_resource type="Script" uid="uid://d1xal6u1f7ged" path="res://Scene/Map/Generate Cave System/cave_map_sceneController.gd" id="1_pcja3"]
+[ext_resource type="Texture2D" uid="uid://dwdhbyyw0r3r0" path="res://Assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="2_7phwa"]
 [ext_resource type="Script" uid="uid://ckgg3c6sva6bo" path="res://Scene/Map/Generate Cave System/CaveRender.gd" id="2_on33b"]
+[ext_resource type="Texture2D" uid="uid://bkjaep834oa26" path="res://Assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Variations.png" id="3_ebdry"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gsjts"]
+texture = ExtResource("2_7phwa")
+1:2/0 = 0
+14:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfm0l"]
+texture = ExtResource("3_ebdry")
+6:5/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2bl8x"]
+sources/0 = SubResource("TileSetAtlasSource_gsjts")
+sources/1 = SubResource("TileSetAtlasSource_vfm0l")
 
 [node name="CaveMap" type="Node2D" unique_id=2146544743]
 script = ExtResource("1_pcja3")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=829115823]
+tile_set = SubResource("TileSet_2bl8x")
 format = 2
 script = ExtResource("2_on33b")
