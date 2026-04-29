@@ -58,7 +58,7 @@ func generate_cave(seed: int):
 	for y in range(100):
 		var row = []
 		for x in range(100):
-			row.append(rng.randf() > 0.45)
+			row.append(rng.randf() > 0.4)
 		grid.append(row)
 		
 	for i in range(4):

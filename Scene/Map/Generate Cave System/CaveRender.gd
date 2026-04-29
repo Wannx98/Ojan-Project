@@ -1,8 +1,8 @@
 extends TileMap
 
 const SOURCE_ID = 0
-const WALL_TILE = Vector2i(1, 2)
-const AIR_TILE  = Vector2i(14, 7)
+const WALL_TILE = Vector2i(14, 7)
+const AIR_TILE  = Vector2i(1, 2)
 
 func render_cave(grid):
 	print("RENDER KE PANGGIL")
