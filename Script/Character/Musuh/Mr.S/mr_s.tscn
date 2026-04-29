@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://c032tw3us4p6u"]
+[gd_scene format=3 uid="uid://c032tw3us4p6u"]
 
 [ext_resource type="Script" uid="uid://bl28elmjs4rlx" path="res://Script/Character/Musuh/Mr.S/mr_s.gd" id="1_0vug5"]
 [ext_resource type="Texture2D" uid="uid://c2g6sddmf3kf4" path="res://Assets/Character/Mr.S/Slice_MrS.png" id="2_4xcj1"]
@@ -14,8 +14,9 @@
 [ext_resource type="Script" uid="uid://b11hnumgpjmjs" path="res://Script/Character/PlayerMC/MC_hitbox.gd" id="12_tyk41"]
 [ext_resource type="Texture2D" uid="uid://cr0n67fkla4br" path="res://Assets/UI hias.png" id="13_vonod"]
 
-[sub_resource type="Resource" id="Resource_tyk41"]
+[sub_resource type="Resource" id="Resource_vonod"]
 script = ExtResource("2_a8ae8")
+max_hp = 200
 metadata/_custom_type_script = "uid://c0t06002shg5o"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0c8tw"]
@@ -459,31 +460,30 @@ radius = 6.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vonod"]
 height = 20.0
 
-[node name="Mr_S" type="CharacterBody2D" groups=["enemy"]]
+[node name="Mr_S" type="CharacterBody2D" unique_id=1970850439 groups=["enemy"]]
 z_index = 3
 script = ExtResource("1_0vug5")
-enemy_id = null
-stats = SubResource("Resource_tyk41")
+stats = SubResource("Resource_vonod")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=938083299]
 sprite_frames = SubResource("SpriteFrames_jwxvu")
 animation = &"atk_down"
 autoplay = "down"
 script = ExtResource("10_m76st")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2069207877]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_4xcj1")
 
-[node name="Attackbox" type="Area2D" parent="."]
+[node name="Attackbox" type="Area2D" parent="." unique_id=706854198]
 visible = false
 position = Vector2(-1, 2)
 script = ExtResource("12_tyk41")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Attackbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attackbox" unique_id=506947058]
 shape = SubResource("CapsuleShape2D_vonod")
 
-[node name="TextureRect" type="TextureRect" parent="Attackbox/CollisionShape2D"]
+[node name="TextureRect" type="TextureRect" parent="Attackbox/CollisionShape2D" unique_id=1906557280]
 offset_left = -10.0
 offset_top = -8.0
 offset_right = 8.687023
@@ -492,7 +492,7 @@ texture = ExtResource("13_vonod")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1728743573]
 position = Vector2(-1, 2)
 
 [connection signal="body_entered" from="Attackbox" to="." method="_on_attackbox_body_entered"]

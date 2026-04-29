@@ -545,6 +545,7 @@ script = ExtResource("4_dknni")
 shape = SubResource("CapsuleShape2D_hnoyi")
 
 [node name="TextureRect" type="TextureRect" parent="Attackbox" unique_id=90199876]
+visible = false
 offset_left = -7.0
 offset_top = -6.0
 offset_right = 6.714287

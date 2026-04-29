@@ -12,6 +12,8 @@ var can_attack := true
 
 func _ready():
 	add_to_group("enemy")
+	stats=stats
+	print(stats)
 	hp = stats.max_hp
 	
 	#regist all enemy

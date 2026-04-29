@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dxo4lpy6drl0v"]
+[gd_scene format=3 uid="uid://dxo4lpy6drl0v"]
 
 [ext_resource type="Script" uid="uid://bcl63auytobqm" path="res://Script/Character/Musuh/enemy.gd" id="1_5xx5t"]
 [ext_resource type="Texture2D" uid="uid://b7ysy0jhtul56" path="res://Assets/Demmon.png" id="2_d08e8"]
@@ -160,20 +160,20 @@ animations = [{
 radius = 17.0
 height = 54.0
 
-[node name="Musuh" type="Node2D"]
+[node name="Musuh" type="Node2D" unique_id=756709989]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["enemy"]]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1788967441 groups=["enemy"]]
 z_index = 5
 script = ExtResource("1_5xx5t")
 stats = SubResource("Resource_7ncog")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1697040957]
 position = Vector2(2, -1)
 scale = Vector2(0.51529306, 0.51529306)
 sprite_frames = SubResource("SpriteFrames_fno43")
 animation = &"Idle"
 script = ExtResource("3_wn80f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2139146787]
 visible = false
 shape = SubResource("CapsuleShape2D_mgojx")
