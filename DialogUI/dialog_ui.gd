@@ -1,7 +1,7 @@
 extends CanvasLayer
 class_name DialogUI
 
-@onready var dialog_label = $Panel/Label
+@onready var dialog_label = $Panel2/Label
 @export var typing_speed := 0.03
 
 var lines := []

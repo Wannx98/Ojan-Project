@@ -9,11 +9,29 @@
 [ext_resource type="Texture2D" uid="uid://c815rijn0qwvn" path="res://Assets/HP full.png" id="7_freo0"]
 [ext_resource type="PackedScene" uid="uid://b424va6ioofdl" path="res://QuestSystem/quest_manager.tscn" id="8_pe2j2"]
 [ext_resource type="PackedScene" uid="uid://bc1u4e6rs4ghk" path="res://Inventory/InventoryUI/inventory_scene.tscn" id="9_p233f"]
+[ext_resource type="Script" uid="uid://divhggysgshcu" path="res://Script/PauseMenu.gd" id="10_lee0j"]
+[ext_resource type="FontFile" uid="uid://cj5t8f7o5b4j2" path="res://Assets/Font/Cinzel Bold/Cinzel Bold.ttf" id="11_y14mg"]
+[ext_resource type="Texture2D" uid="uid://bgjunpyeo882w" path="res://Assets/UI/Button/resumeui (1).png" id="12_r76bv"]
+[ext_resource type="Texture2D" uid="uid://cuxfwb61je5r2" path="res://Assets/UI/Button/SAVE.png" id="13_freo0"]
+[ext_resource type="Texture2D" uid="uid://ceemohc5fos2w" path="res://Assets/UI/Button/EXIT.png" id="13_y14mg"]
+[ext_resource type="Texture2D" uid="uid://xyatvv5h8lf8" path="res://Assets/UI/Button/mainmenu.png" id="14_y14mg"]
 
 [sub_resource type="Resource" id="Resource_1d8q1"]
 script = ExtResource("5_r76bv")
 movement_speed = 150.0
 metadata/_custom_type_script = "uid://0ei53s1glvpa"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_freo0"]
+atlas = ExtResource("12_r76bv")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p233f"]
+atlas = ExtResource("13_freo0")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyuoa"]
+atlas = ExtResource("14_y14mg")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe2j2"]
+atlas = ExtResource("13_y14mg")
 
 [sub_resource type="Animation" id="Animation_lee88"]
 resource_name = "Fade in"
@@ -34,6 +52,15 @@ script = ExtResource("1_hvsdd")
 layer = 4
 
 [node name="DialogUI" parent="." unique_id=1651381977 instance=ExtResource("3_cv8nh")]
+
+[node name="Panel2" type="Panel" parent="DialogUI" unique_id=107125384]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="DialogUI/Panel2" unique_id=2110240339]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="PlayerMC" parent="." unique_id=1106927008 instance=ExtResource("4_yyuoa")]
 position = Vector2(169, 15)
@@ -71,6 +98,91 @@ metadata/_edit_lock_ = true
 [node name="Inventory" parent="CanvasLayer/Manager" unique_id=376616664 instance=ExtResource("9_p233f")]
 visible = false
 metadata/_edit_lock_ = true
+
+[node name="PauseMenu" type="Control" parent="CanvasLayer" unique_id=1517292456]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_lee0j")
+
+[node name="DarkBackground" type="ColorRect" parent="CanvasLayer/PauseMenu" unique_id=371131324]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/PauseMenu" unique_id=1847153698]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PauseMenu/CenterContainer" unique_id=400260118]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseMenu/CenterContainer/Panel" unique_id=560908802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -981.0
+offset_top = -1002.5
+offset_right = 981.0
+offset_bottom = 1002.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(25, 25)
+pivot_offset_ratio = Vector2(-25, -25)
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PauseTitle" type="Label" parent="CanvasLayer/PauseMenu/CenterContainer/Panel/VBoxContainer" unique_id=1524221408]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95686275, 0.8392157, 1)
+theme_override_fonts/font = ExtResource("11_y14mg")
+theme_override_font_sizes/font_size = 56
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="TextureButton" parent="CanvasLayer/PauseMenu/CenterContainer/Panel/VBoxContainer" unique_id=1743821135]
+custom_minimum_size = Vector2(220, 75)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_freo0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SaveButton" type="TextureButton" parent="CanvasLayer/PauseMenu/CenterContainer/Panel/VBoxContainer" unique_id=572694645]
+custom_minimum_size = Vector2(220, 75)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_p233f")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MainMenuButton" type="TextureButton" parent="CanvasLayer/PauseMenu/CenterContainer/Panel/VBoxContainer" unique_id=1119396818]
+custom_minimum_size = Vector2(220, 75)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_yyuoa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="QuitButton" type="TextureButton" parent="CanvasLayer/PauseMenu/CenterContainer/Panel/VBoxContainer" unique_id=383731825]
+custom_minimum_size = Vector2(220, 75)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_pe2j2")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="Screen Transision" type="Node" parent="." unique_id=1872146248]
 

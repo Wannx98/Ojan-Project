@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bvsi54etbgy3k"]
+[gd_scene load_steps=8 format=3 uid="uid://bvsi54etbgy3k"]
 
 [ext_resource type="Script" uid="uid://d1xal6u1f7ged" path="res://Scene/Map/Generate Cave System/cave_map_sceneController.gd" id="1_pcja3"]
 [ext_resource type="Texture2D" uid="uid://dwdhbyyw0r3r0" path="res://Assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="2_7phwa"]
@@ -9,6 +9,15 @@
 texture = ExtResource("2_7phwa")
 1:2/0 = 0
 14:7/0 = 0
+1:8/0 = 0
+1:7/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfm0l"]
 texture = ExtResource("3_ebdry")
@@ -24,10 +33,10 @@ texture = ExtResource("3_ebdry")
 sources/0 = SubResource("TileSetAtlasSource_gsjts")
 sources/1 = SubResource("TileSetAtlasSource_vfm0l")
 
-[node name="CaveMap" type="Node2D" unique_id=2146544743]
+[node name="CaveMap" type="Node2D"]
 script = ExtResource("1_pcja3")
 
-[node name="TileMap" type="TileMap" parent="." unique_id=829115823]
+[node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2bl8x")
 format = 2
 script = ExtResource("2_on33b")
