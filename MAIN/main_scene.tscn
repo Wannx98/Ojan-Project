@@ -9,15 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://c815rijn0qwvn" path="res://Assets/HP full.png" id="7_freo0"]
 [ext_resource type="PackedScene" uid="uid://b424va6ioofdl" path="res://QuestSystem/quest_manager.tscn" id="8_pe2j2"]
 [ext_resource type="PackedScene" uid="uid://bc1u4e6rs4ghk" path="res://Inventory/InventoryUI/inventory_scene.tscn" id="9_p233f"]
-
-
-[ext_resource type="Script" uid="uid://divhggysgshcu" path="res://MAIN/UI Main Menu/PauseMenu.gd" id="10_lee0j"]
+[ext_resource type="Script" uid="uid://divhggysgshcu" path="res://Script/PauseMenu.gd" id="10_lee0j"]
 [ext_resource type="FontFile" uid="uid://cj5t8f7o5b4j2" path="res://Assets/Font/Cinzel Bold/Cinzel Bold.ttf" id="11_y14mg"]
 [ext_resource type="Texture2D" uid="uid://bgjunpyeo882w" path="res://Assets/UI/Button/resumeui (1).png" id="12_r76bv"]
 [ext_resource type="Texture2D" uid="uid://cuxfwb61je5r2" path="res://Assets/UI/Button/SAVE.png" id="13_freo0"]
 [ext_resource type="Texture2D" uid="uid://ceemohc5fos2w" path="res://Assets/UI/Button/EXIT.png" id="13_y14mg"]
 [ext_resource type="Texture2D" uid="uid://xyatvv5h8lf8" path="res://Assets/UI/Button/mainmenu.png" id="14_y14mg"]
-
 
 [sub_resource type="Resource" id="Resource_1d8q1"]
 script = ExtResource("5_r76bv")
@@ -55,15 +52,6 @@ script = ExtResource("1_hvsdd")
 layer = 4
 
 [node name="DialogUI" parent="." unique_id=1651381977 instance=ExtResource("3_cv8nh")]
-
-[node name="Panel2" type="Panel" parent="DialogUI" unique_id=107125384]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="DialogUI/Panel2" unique_id=2110240339]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="PlayerMC" parent="." unique_id=1106927008 instance=ExtResource("4_yyuoa")]
 position = Vector2(169, 15)

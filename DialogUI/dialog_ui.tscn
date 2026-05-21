@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm3e3w7q3s0xl"]
+[gd_scene format=3 uid="uid://cm3e3w7q3s0xl"]
 
 [ext_resource type="Script" uid="uid://mrcgeqni36n2" path="res://DialogUI/dialog_ui.gd" id="1_hf8po"]
 [ext_resource type="Texture2D" uid="uid://c2mds88jtexi2" path="res://Assets/wood_panel.png" id="2_mmbk5"]
@@ -7,17 +7,19 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmbk5"]
 texture = ExtResource("2_mmbk5")
 
-[node name="DialogUI" type="CanvasLayer" groups=["dialog_ui"]]
+[sub_resource type="LabelSettings" id="LabelSettings_mmbk5"]
+
+[node name="DialogUI" type="CanvasLayer" unique_id=631163133 groups=["dialog_ui"]]
 visible = false
 script = ExtResource("1_hf8po")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=676070013]
 offset_top = 415.0
 offset_right = 1148.0
 offset_bottom = 647.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_mmbk5")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=42124170]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.017
@@ -27,8 +29,9 @@ offset_top = 47.0
 offset_right = 586.484
 offset_bottom = 278.4
 theme_override_fonts/font = ExtResource("3_mmbk5")
+label_settings = SubResource("LabelSettings_mmbk5")
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="Button" type="Button" parent="Panel" unique_id=1670285848]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0

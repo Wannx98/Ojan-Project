@@ -24,6 +24,7 @@ config/icon="res://icon.svg"
 Quest_Manager="*res://QuestSystem/quest_manager.gd"
 Item_database="*res://Inventory/Item_Database/Item_database.gd"
 GenerateCaveSystem="*uid://3mr17xdp63wr"
+DialogUi="*uid://cm3e3w7q3s0xl"
 SaveManager="*uid://b5sl6drfd88vs"
 
 [global_group]
