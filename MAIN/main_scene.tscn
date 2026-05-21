@@ -4,17 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://c0up7ewfsp3dq" path="res://QuestSystem/QuestUI/QuestUI.tscn" id="2_lee0j"]
 [ext_resource type="PackedScene" uid="uid://cm3e3w7q3s0xl" path="res://DialogUI/dialog_ui.tscn" id="3_cv8nh"]
 [ext_resource type="PackedScene" uid="uid://cdryc1kkf7kc1" path="res://Script/Character/PlayerMC/player_mc.tscn" id="4_yyuoa"]
-[ext_resource type="Script" uid="uid://0ei53s1glvpa" path="res://Script/Character/GlobalCharacterStats.gd" id="5_r76bv"]
+[ext_resource type="Script" uid="uid://0ei53s1glvpa" path="res://Script/Character/McCharacterStats.gd" id="5_r76bv"]
 [ext_resource type="Texture2D" uid="uid://cga5um6mfmjuc" path="res://Assets/HP low.png" id="6_y14mg"]
 [ext_resource type="Texture2D" uid="uid://c815rijn0qwvn" path="res://Assets/HP full.png" id="7_freo0"]
 [ext_resource type="PackedScene" uid="uid://b424va6ioofdl" path="res://QuestSystem/quest_manager.tscn" id="8_pe2j2"]
 [ext_resource type="PackedScene" uid="uid://bc1u4e6rs4ghk" path="res://Inventory/InventoryUI/inventory_scene.tscn" id="9_p233f"]
-[ext_resource type="Script" uid="uid://divhggysgshcu" path="res://Script/PauseMenu.gd" id="10_lee0j"]
+
+
+[ext_resource type="Script" uid="uid://divhggysgshcu" path="res://MAIN/UI Main Menu/PauseMenu.gd" id="10_lee0j"]
 [ext_resource type="FontFile" uid="uid://cj5t8f7o5b4j2" path="res://Assets/Font/Cinzel Bold/Cinzel Bold.ttf" id="11_y14mg"]
 [ext_resource type="Texture2D" uid="uid://bgjunpyeo882w" path="res://Assets/UI/Button/resumeui (1).png" id="12_r76bv"]
 [ext_resource type="Texture2D" uid="uid://cuxfwb61je5r2" path="res://Assets/UI/Button/SAVE.png" id="13_freo0"]
 [ext_resource type="Texture2D" uid="uid://ceemohc5fos2w" path="res://Assets/UI/Button/EXIT.png" id="13_y14mg"]
 [ext_resource type="Texture2D" uid="uid://xyatvv5h8lf8" path="res://Assets/UI/Button/mainmenu.png" id="14_y14mg"]
+
 
 [sub_resource type="Resource" id="Resource_1d8q1"]
 script = ExtResource("5_r76bv")
