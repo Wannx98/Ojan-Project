@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://cu1caebi6tgan"]
+
+[ext_resource type="Script" uid="uid://chdkfkx81rlnq" path="res://MAIN/UI Main Menu/MainMenu.gd" id="1_fheih"]
+[ext_resource type="Texture2D" uid="uid://fikiuapd5vhy" path="res://Assets/Background/qqPcRvRGyA6YYSWuYZUNW.jpg" id="2_hgmp6"]
+[ext_resource type="FontFile" uid="uid://cj5t8f7o5b4j2" path="res://Assets/Font/Cinzel Bold/Cinzel Bold.ttf" id="3_ukpmg"]
+[ext_resource type="Texture2D" uid="uid://berlo0vmwf8nq" path="res://Assets/UI/Button/START_2.png" id="4_2n0nn"]
+[ext_resource type="Texture2D" uid="uid://bwmmyr3ji11k2" path="res://Assets/UI/Button/CONTINUE.png" id="5_nuduu"]
+[ext_resource type="Texture2D" uid="uid://b48bjg5lqa3xr" path="res://Assets/UI/Button/SETTINGSS.png" id="6_wg4n0"]
+[ext_resource type="Texture2D" uid="uid://ceemohc5fos2w" path="res://Assets/UI/Button/EXIT.png" id="7_v3loy"]
+[ext_resource type="Texture2D" uid="uid://bps1yf8ac7ft1" path="res://Assets/UI/Button/MUTE.png" id="8_qiecq"]
+[ext_resource type="Texture2D" uid="uid://b4qnr8sepjvq1" path="res://Assets/UI/Button/BACK.png" id="9_om3xm"]
+[ext_resource type="AudioStream" uid="uid://fp5q6pduy3e5" path="res://Assets/Audio/menu_bgm.mp3" id="10_k27ca"]
+[ext_resource type="AudioStream" uid="uid://sxw8cb6naq78" path="res://Assets/Audio/Click.mp3" id="11_5utjf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3p41"]
+atlas = ExtResource("4_2n0nn")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55g6a"]
+atlas = ExtResource("5_nuduu")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5kgo"]
+atlas = ExtResource("6_wg4n0")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbdn0"]
+atlas = ExtResource("7_v3loy")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du3yi"]
+atlas = ExtResource("8_qiecq")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2pvq"]
+atlas = ExtResource("9_om3xm")
+
+[node name="MainMenu" type="Control" unique_id=1388823252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fheih")
+
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=287225289]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hgmp6")
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=393570283]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.53333336)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=590364700]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer" unique_id=1900154246]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="TitleLabel" type="Label" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=681071597]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95686275, 0.8392157, 1)
+theme_override_fonts/font = ExtResource("3_ukpmg")
+theme_override_font_sizes/font_size = 56
+text = "Ojan The  Wanderer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="TextureButton" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=1778553477]
+custom_minimum_size = Vector2(300, 110)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v3p41")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ContinueButton" type="TextureButton" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=3009520]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_55g6a")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SettingButton" type="TextureButton" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=1116547115]
+custom_minimum_size = Vector2(380, 100)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v5kgo")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="QuitButton" type="TextureButton" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=69689041]
+custom_minimum_size = Vector2(300, 110)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_vbdn0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SettingPanel" type="Panel" parent="." unique_id=238413906]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingBackground" type="ColorRect" parent="SettingPanel" unique_id=897478486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8666667)
+
+[node name="CenterContainer" type="CenterContainer" parent="SettingPanel" unique_id=1375954197]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="SettingPanel/CenterContainer" unique_id=2015743750]
+custom_minimum_size = Vector2(430, 390)
+layout_mode = 2
+
+[node name="SettingBox" type="VBoxContainer" parent="SettingPanel/CenterContainer/Panel" unique_id=1973106900]
+custom_minimum_size = Vector2(300, 160)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(35, 25)
+pivot_offset_ratio = Vector2(-35, -25)
+theme_override_constants/separation = 22
+alignment = 1
+
+[node name="SettingTitle" type="Label" parent="SettingPanel/CenterContainer/Panel/SettingBox" unique_id=1270098706]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ukpmg")
+theme_override_font_sizes/font_size = 56
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicButton" type="TextureButton" parent="SettingPanel/CenterContainer/Panel/SettingBox" unique_id=1856711322]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_du3yi")
+stretch_mode = 5
+
+[node name="BackButton" type="TextureButton" parent="SettingPanel/CenterContainer/Panel/SettingBox" unique_id=2009146324]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_x2pvq")
+stretch_mode = 5
+
+[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=745337343]
+stream = ExtResource("10_k27ca")
+autoplay = true
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=398413562]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ClickSFX" type="AudioStreamPlayer" parent="." unique_id=1828769599]
+stream = ExtResource("11_5utjf")

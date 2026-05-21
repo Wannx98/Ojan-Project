@@ -37,7 +37,6 @@ sources/1 = SubResource("TileSetAtlasSource_vfm0l")
 script = ExtResource("1_pcja3")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(0, 1)
 tile_set = SubResource("TileSet_2bl8x")
 format = 2
 script = ExtResource("2_on33b")
