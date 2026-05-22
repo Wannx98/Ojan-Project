@@ -58,7 +58,7 @@ position = Vector2(169, 15)
 player_stats = SubResource("Resource_1d8q1")
 
 [node name="Camera2D" type="Camera2D" parent="PlayerMC" unique_id=354450651]
-zoom = Vector2(1.8, 1.8)
+zoom = Vector2(2, 2)
 
 [node name="MapHolder" type="Node2D" parent="." unique_id=742908980]
 

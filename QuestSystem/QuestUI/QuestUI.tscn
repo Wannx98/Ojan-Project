@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0up7ewfsp3dq"]
+[gd_scene format=3 uid="uid://c0up7ewfsp3dq"]
 
 [ext_resource type="Script" uid="uid://bfe3eyap8q0y3" path="res://QuestSystem/QuestUI/QuestUI.gd" id="1_0fjs1"]
 [ext_resource type="Texture2D" uid="uid://c2mds88jtexi2" path="res://Assets/wood_panel.png" id="2_ngacf"]
@@ -12,21 +12,21 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
-[node name="QuestUI" type="CanvasLayer"]
+[node name="QuestUI" type="CanvasLayer" unique_id=1462882319]
 script = ExtResource("1_0fjs1")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=2124748995]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 90.0
-offset_right = -932.0
-offset_bottom = -448.0
+offset_right = -1706.2258
+offset_bottom = -872.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1enoq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1812931860]
 z_index = 1
 layout_mode = 0
 offset_left = 26.0
@@ -34,20 +34,20 @@ offset_top = 8.0
 offset_right = 86.0
 offset_bottom = 120.0
 
-[node name="QuestTitle" type="Label" parent="Panel/VBoxContainer"]
+[node name="QuestTitle" type="Label" parent="Panel/VBoxContainer" unique_id=609508482]
 z_index = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_x2b53")
 
-[node name="QuestDescription" type="Label" parent="Panel/VBoxContainer"]
+[node name="QuestDescription" type="Label" parent="Panel/VBoxContainer" unique_id=1724898298]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_x2b53")
 
-[node name="QuestProgressText" type="Label" parent="Panel/VBoxContainer"]
+[node name="QuestProgressText" type="Label" parent="Panel/VBoxContainer" unique_id=1588366550]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_x2b53")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=646601471]
 offset_left = 172.0
 offset_top = 156.0
 offset_right = 218.85715
