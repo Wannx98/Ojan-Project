@@ -2,9 +2,9 @@ extends CanvasLayer
 class_name QuestUI
 
 # Node references
-@onready var title_label = $Panel/VBoxContainer/QuestTitle
-@onready var desc_label = $Panel/VBoxContainer/QuestDescription
-@onready var progress_label = $Panel/VBoxContainer/QuestProgressText
+@onready var title_label = $Control/Panel/VBoxContainer/QuestTitle
+@onready var desc_label = $Control/Panel/VBoxContainer/QuestDescription
+@onready var progress_label = $Control/Panel/VBoxContainer/QuestProgressText
 var current_quest_id := ""
 
 func _ready():
