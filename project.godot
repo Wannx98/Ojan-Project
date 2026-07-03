@@ -15,8 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Gamekudukuntul Map Update Ver. 5,7 1"
+<<<<<<< HEAD
 run/main_scene="uid://cu1caebi6tgan"
 config/features=PackedStringArray("4.6", "Forward Plus")
+=======
+run/main_scene="uid://bv1hcncvk0c25"
+config/features=PackedStringArray("4.5", "Forward Plus")
+>>>>>>> 3d27c94 (generative update)
 config/icon="res://icon.svg"
 
 [autoload]
@@ -24,8 +29,12 @@ config/icon="res://icon.svg"
 Quest_Manager="*res://QuestSystem/quest_manager.gd"
 Item_database="*res://Inventory/Item_Database/Item_database.gd"
 GenerateCaveSystem="*uid://3mr17xdp63wr"
+<<<<<<< HEAD
 DialogUi="*uid://cm3e3w7q3s0xl"
 SaveManager="*uid://b5sl6drfd88vs"
+=======
+Global="*res://Global.gd"
+>>>>>>> 3d27c94 (generative update)
 
 [global_group]
 

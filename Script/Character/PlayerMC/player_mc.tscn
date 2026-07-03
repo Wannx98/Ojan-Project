@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cdryc1kkf7kc1"]
+[gd_scene load_steps=77 format=3 uid="uid://cdryc1kkf7kc1"]
 
 [ext_resource type="Script" uid="uid://dmj5j7ffjd4lr" path="res://Script/Character/PlayerMC/player_mc.gd" id="1_ad65p"]
 [ext_resource type="Script" uid="uid://btdd0ua58t0ah" path="res://Script/Character/PlayerMC/animasi_MC.gd" id="3_4lk2h"]
@@ -516,15 +516,15 @@ height = 10.0
 radius = 9.0
 height = 18.0
 
-[node name="PlayerMC" type="CharacterBody2D" unique_id=1231310627 groups=["player"]]
+[node name="PlayerMC" type="CharacterBody2D" groups=["player"]]
 z_index = 10
 position = Vector2(0, 1)
 script = ExtResource("1_ad65p")
 metadata/_edit_vertical_guides_ = [-1244.0]
 
-[node name="Node" type="Node" parent="." unique_id=2006219813]
+[node name="Node" type="Node" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1734965345]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -4)
 scale = Vector2(1.015625, 0.953125)
 sprite_frames = SubResource("SpriteFrames_i6xtd")
@@ -532,20 +532,24 @@ animation = &"atk_up"
 autoplay = "down"
 script = ExtResource("3_4lk2h")
 
-[node name="BodyShape" type="CollisionShape2D" parent="." unique_id=1304049325]
+[node name="BodyShape" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_557xk")
 
-[node name="Attackbox" type="Area2D" parent="." unique_id=1460751993]
+[node name="Attackbox" type="Area2D" parent="."]
 position = Vector2(0, -1)
 script = ExtResource("4_dknni")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Attackbox" unique_id=551201461]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attackbox"]
 shape = SubResource("CapsuleShape2D_hnoyi")
 
+<<<<<<< HEAD
 [node name="TextureRect" type="TextureRect" parent="Attackbox" unique_id=90199876]
 visible = false
+=======
+[node name="TextureRect" type="TextureRect" parent="Attackbox"]
+>>>>>>> 3d27c94 (generative update)
 offset_left = -7.0
 offset_top = -6.0
 offset_right = 6.714287
@@ -553,6 +557,11 @@ offset_bottom = 6.0
 texture = ExtResource("14_rbhj5")
 expand_mode = 1
 
-[node name="Hitbox" type="Area2D" parent="." unique_id=501382530]
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
 
 [connection signal="body_entered" from="Attackbox" to="." method="_on_hitbox_body_entered"]

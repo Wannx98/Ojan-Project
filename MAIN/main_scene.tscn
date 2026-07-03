@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bv1hcncvk0c25"]
+[gd_scene load_steps=11 format=3 uid="uid://bv1hcncvk0c25"]
 
 [ext_resource type="Script" uid="uid://e3pg0dfvnfoo" path="res://MAIN/main_scene.gd" id="1_hvsdd"]
 [ext_resource type="PackedScene" uid="uid://c0up7ewfsp3dq" path="res://QuestSystem/QuestUI/QuestUI.tscn" id="2_lee0j"]
@@ -21,6 +21,7 @@ script = ExtResource("5_r76bv")
 movement_speed = 150.0
 metadata/_custom_type_script = "uid://0ei53s1glvpa"
 
+<<<<<<< HEAD
 [sub_resource type="AtlasTexture" id="AtlasTexture_freo0"]
 atlas = ExtResource("12_r76bv")
 
@@ -46,31 +47,34 @@ _data = {
 }
 
 [node name="Main Scene" type="Node2D" unique_id=908964052]
+=======
+[node name="Main Scene" type="Node2D"]
+>>>>>>> 3d27c94 (generative update)
 script = ExtResource("1_hvsdd")
 
-[node name="QuestUI" parent="." unique_id=595181844 instance=ExtResource("2_lee0j")]
+[node name="QuestUI" parent="." instance=ExtResource("2_lee0j")]
 layer = 4
 
-[node name="DialogUI" parent="." unique_id=1651381977 instance=ExtResource("3_cv8nh")]
+[node name="DialogUI" parent="." instance=ExtResource("3_cv8nh")]
 
-[node name="PlayerMC" parent="." unique_id=1106927008 instance=ExtResource("4_yyuoa")]
+[node name="PlayerMC" parent="." instance=ExtResource("4_yyuoa")]
 position = Vector2(169, 15)
 player_stats = SubResource("Resource_1d8q1")
 
-[node name="Camera2D" type="Camera2D" parent="PlayerMC" unique_id=354450651]
+[node name="Camera2D2" type="Camera2D" parent="PlayerMC"]
 zoom = Vector2(1.8, 1.8)
 
-[node name="MapHolder" type="Node2D" parent="." unique_id=742908980]
+[node name="MapHolder" type="Node2D" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1031513953]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1171974015]
+[node name="HUD" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HP bar" type="TextureProgressBar" parent="CanvasLayer/HUD" unique_id=1317980087]
+[node name="HP bar" type="TextureProgressBar" parent="CanvasLayer/HUD"]
 layout_mode = 1
 offset_top = 2.0
 offset_right = 520.0
@@ -80,16 +84,17 @@ texture_under = ExtResource("6_y14mg")
 texture_progress = ExtResource("7_freo0")
 metadata/_edit_lock_ = true
 
-[node name="Manager" type="Node" parent="CanvasLayer" unique_id=1022303408]
+[node name="Manager" type="Node" parent="CanvasLayer"]
 
-[node name="QuestManager" parent="CanvasLayer/Manager" unique_id=1664281080 instance=ExtResource("8_pe2j2")]
+[node name="QuestManager" parent="CanvasLayer/Manager" instance=ExtResource("8_pe2j2")]
 
-[node name="Save Manager" type="Node" parent="CanvasLayer/Manager" unique_id=505133934]
+[node name="Save Manager" type="Node" parent="CanvasLayer/Manager"]
 
-[node name="Inventory" parent="CanvasLayer/Manager" unique_id=376616664 instance=ExtResource("9_p233f")]
+[node name="Inventory" parent="CanvasLayer/Manager" instance=ExtResource("9_p233f")]
 visible = false
 metadata/_edit_lock_ = true
 
+<<<<<<< HEAD
 [node name="PauseMenu" type="Control" parent="CanvasLayer" unique_id=1517292456]
 process_mode = 3
 visible = false
@@ -176,8 +181,11 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Screen Transision" type="Node" parent="." unique_id=1872146248]
+=======
+[node name="Screen Transision" type="Node" parent="."]
+>>>>>>> 3d27c94 (generative update)
 
-[node name="ColorRect" type="ColorRect" parent="Screen Transision" unique_id=1356934057]
+[node name="ColorRect" type="ColorRect" parent="Screen Transision"]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -187,5 +195,4 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Screen Transision" unique_id=298170407]
-libraries/ = SubResource("AnimationLibrary_k2rys")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Screen Transision"]

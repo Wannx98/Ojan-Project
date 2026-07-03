@@ -32,20 +32,20 @@ func count_neighbors(grid, x, y):
 #perhalus noise dari hasil hitung tetangga 
 func smooth_map(grid):
 	var new_grid = []
-	
 	for y in range(grid.size()):
 		var row = []
-		
 		for x in range(grid[y].size()):
 			var neighbors = count_neighbors(grid, x, y)
 			
 			if neighbors >= 5:
-				row.append(true)
+				row.append(1) # 1 = Dinding
 			else:
-				row.append(false)
-		
+				var random_chance = randf()
+				if random_chance < 0.10: 
+					row.append(2) # 2 = Rumput (Peluang 10%)
+				else:
+					row.append(0) # 0 = Tanah Biasa
 		new_grid.append(row)
-	
 	return new_grid
 	
 #func generate
