@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b1apq5q8c4qr8"]
+
+[ext_resource type="Script" uid="uid://bsmpp3gnt23hn" path="res://Skill/SkillDataBase/Mr.S_SwordDrop/Mr.S_DropSword.gd" id="1_lk1fa"]
+
+[node name="MrSDropsword" type="Node2D" unique_id=595575184]
+script = ExtResource("1_lk1fa")

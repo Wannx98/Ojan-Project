@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://ds53fkjkmp5kx"]
+
+[ext_resource type="Script" uid="uid://bgl2tuc6qgy2n" path="res://Skill/Core/SkillData.gd" id="1_0moc6"]
+[ext_resource type="PackedScene" uid="uid://b1apq5q8c4qr8" path="res://Skill/SkillDataBase/Mr.S_SwordDrop/mr_s_dropsword.tscn" id="2_fq3tt"]
+
+[resource]
+script = ExtResource("1_0moc6")
+id = "SwordDrop"
+skill_name = "BigD"
+cooldown = 10.0
+damage = 10.0
+cast_time = 3.0
+range = 6.0
+animation_prefix = "Sword"
+skill_scene = ExtResource("2_fq3tt")
+metadata/_custom_type_script = "uid://bgl2tuc6qgy2n"

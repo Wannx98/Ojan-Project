@@ -34,7 +34,7 @@ func load_skills(path: String) -> Dictionary:
 	dir.list_dir_end()
 	return db
 
-func get_skill(id: String) -> SkillData:
+func get_skill(id: SkillData) -> SkillData:
 	var s = skills.get(id, null)
 	if s:
 		return s.duplicate() # 🔥 penting

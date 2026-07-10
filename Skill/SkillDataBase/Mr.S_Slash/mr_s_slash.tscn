@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dba8c4pchno7s"]
+
+[ext_resource type="Script" uid="uid://5m47arrdvs7j" path="res://Skill/SkillDataBase/Mr.S_Slash/Mr.S_Slash.gd" id="1_d4ohk"]
+
+[node name="Mr_S_Slash" type="Node2D" unique_id=1226317184]
+script = ExtResource("1_d4ohk")

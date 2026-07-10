@@ -36,8 +36,10 @@ func _physics_process(delta):
 		var dir = (player.global_position - global_position).normalized()
 		velocity = dir * stats.movement_speed
 		move_and_slide()
+		$AnimatedSprite2D._update_animation(velocity)
 	else:
 		velocity = Vector2.ZERO
+		$AnimatedSprite2D._update_animation(Vector2.ZERO)
 		attack_player()
 
 

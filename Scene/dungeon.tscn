@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bh26aukmjcynr"]
+[gd_scene format=3 uid="uid://bh26aukmjcynr"]
 
 [ext_resource type="Texture2D" uid="uid://dwt86dyqsd51j" path="res://Assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Bonfire/Bonfire.png" id="1_dhaj3"]
 [ext_resource type="Texture2D" uid="uid://c86dhfu5uiebm" path="res://Assets/Dungeon/Dungeon_Tiles.png" id="1_dmavj"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bakdwiloty3wu" path="res://Assets/Pixel Crawler - Free Pack/Environment/Props/Static/Furniture.png" id="3_5bhdd"]
 [ext_resource type="Texture2D" uid="uid://bs50aicb008i2" path="res://Assets/Pixel Crawler - Free Pack/Environment/Props/Static/Dungeon_Props.png" id="4_1urpn"]
 [ext_resource type="PackedScene" uid="uid://dslmw17v1d4eq" path="res://Inventory/Item_Database/Item_Scene(Add drop item)/item_scene.tscn" id="6_5bhdd"]
-[ext_resource type="Texture2D" uid="uid://brlpk2dlpmtjt" path="res://Assets/Item/Item__29.png" id="7_1urpn"]
 [ext_resource type="PackedScene" uid="uid://c032tw3us4p6u" path="res://Script/Character/Musuh/Mr.S/mr_s.tscn" id="8_watyu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_watyu"]
@@ -932,9 +931,9 @@ sources/4 = SubResource("TileSetAtlasSource_06hxb")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onq7g"]
 
-[node name="dungeon" type="Node2D"]
+[node name="dungeon" type="Node2D" unique_id=510111931]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=428179297]
 position = Vector2(25, 1)
 tile_set = SubResource("TileSet_cfpi3")
 format = 2
@@ -951,29 +950,28 @@ layer_3/z_index = 50
 layer_3/tile_data = PackedInt32Array(196600, 3145730, 805306380, 262136, 393218, 34, 196601, 720898, 30, 262137, 458754, 34, 196602, 3145730, 805306380, 262138, 524290, 34, 131077, 3145730, 805306380, 196613, 393218, 34, 131078, 720898, 30, 196614, 458754, 34, 131079, 3145730, 805306380, 196615, 524290, 34, 327708, 3080194, 4, 393244, 3080194, 5, 262173, 2949122, 4, 327709, 2949122, 5, 393245, 3014658, 5, 262174, 3014658, 4, 327710, 3014658, 5, 393246, 3014658, 5, 1048595, 1, 13, 1048596, 65537, 13, 1048597, 131073, 13, 1048598, 196609, 13, 1048599, 65537, 13, 1048600, 131073, 13, 1048601, 196609, 13, 1048602, 262145, 13, 1310746, 458754, 34, 1310747, 458754, 34, 1245212, 524290, 33, 1310748, 524290, 34, 1245209, 393218, 33, 1310745, 393218, 34, 1310737, 3145730, 12, 1376273, 3014658, 7, 1376274, 3014658, 8, 589845, 327682, 29, 655381, 327682, 30, 720917, 327682, 31, 786453, 327682, 32, 851989, 327682, 33, 655384, 393218, 30, 720920, 393218, 31, 786456, 393218, 31, 851992, 393218, 32, 1310739, 3211266, 2, 1376275, 3211266, 3, -196638, 2, 1, -131102, 2, 2, -196637, 65538, 1, -131101, 65538, 2, -196636, 131074, 1, -131100, 131074, 2, -196626, 2, 1, -131090, 2, 2, -196625, 65538, 1, -131089, 65538, 2, -196624, 131074, 1, -131088, 131074, 2, 1245204, 3145730, 10, 1245201, 3145730, 10, 1310740, 3145730, 12, 393203, 3014658, 4, 458739, 3014658, 5, 196610, 3014658, 4, 262146, 3014658, 5, 196609, 3014658, 4, 262145, 3014658, 5, 262142, 3014658, 4, 327678, 3014658, 5, 262141, 3014658, 4, 327677, 3014658, 5, -65521, 393218, 31, 15, 393218, 31, 65551, 393218, 31, 131087, 393218, 32, -131057, 393218, 30)
 layer_4/name = "furniture 2L"
 layer_4/z_index = 60
-layer_4/tile_data = PackedInt32Array(327709, 3014658, 4, 393245, 3014658, 5, 327710, 3014658, 6, 393246, 3014658, 7, 1376273, 3080194, 6, 1441809, 3080194, 7, 1245210, 3014658, 9, 1245211, 3014658, 9, 917528, 3145730, 5, 851989, 3014658, 4, 917525, 3014658, 5, -262160, 3014658, 4, -196624, 3014658, 5, -262161, 3080194, 10, -196625, 3080194, 11, -262162, 3080194, 10, -196626, 3080194, 11, -262174, 3014658, 4, -196638, 3014658, 5, -262173, 3014658, 10, -196637, 3014658, 11, -196636, 3080194, 11, 262131, 3014658, 4, 327667, 3014658, 5, 262132, 3014658, 4, 327668, 3014658, 5, 196620, 3014658, 4, 262156, 3014658, 5, 196619, 3080194, 6, 262155, 3080194, 7, 196614, 262147, 4, 262150, 262147, 5, 262137, 262147, 4, 327673, 262147, 5, 131074, 3014658, 4, 196610, 3014658, 5, 196605, 3014658, 4, 262141, 3014658, 5, 131087, 3080194, 4, 196623, 3080194, 5, 131073, 3080194, 4, 196609, 3080194, 5, 196606, 3080194, 4, 262142, 3080194, 5, -262129, 3014658, 6, -196593, 3014658, 7)
+layer_4/tile_data = PackedInt32Array(327709, 3014658, 4, 393245, 3014658, 5, 327710, 3014658, 6, 393246, 3014658, 7, 1376273, 3080194, 6, 1441809, 3080194, 7, 1245210, 3014658, 9, 1245211, 3014658, 9, 917528, 3145730, 5, 851989, 3014658, 4, 917525, 3014658, 5, -262160, 3014658, 4, -196624, 3014658, 5, -262161, 3080194, 10, -196625, 3080194, 11, -262162, 3080194, 10, -196626, 3080194, 11, -262174, 3014658, 4, -196638, 3014658, 5, -262173, 3014658, 10, -196637, 3014658, 11, -196636, 3080194, 11, 196620, 3014658, 4, 262156, 3014658, 5, 196619, 3080194, 6, 262155, 3080194, 7, 196614, 262147, 4, 262150, 262147, 5, 262137, 262147, 4, 327673, 262147, 5, 131074, 3014658, 4, 196610, 3014658, 5, 196605, 3014658, 4, 262141, 3014658, 5, 131087, 3080194, 4, 196623, 3080194, 5, 131073, 3080194, 4, 196609, 3080194, 5, 196606, 3080194, 4, 262142, 3080194, 5, -262129, 3014658, 6, -196593, 3014658, 7)
 layer_5/name = "furniture 3l2"
 layer_5/z_index = 70
 layer_5/tile_data = PackedInt32Array(851989, 3080194, 7, 786453, 3080194, 6, 196595, 3014658, 4, 262131, 3014658, 5, 131084, 3080194, 10, 196620, 3080194, 11, 1310740, 3145730, 12)
 
-[node name="spawndungeon" type="Node2D" parent="."]
+[node name="spawndungeon" type="Node2D" parent="." unique_id=1372836190]
 position = Vector2(-334, 91)
 
-[node name="pintu_balik_danjen" type="Area2D" parent="."]
+[node name="pintu_balik_danjen" type="Area2D" parent="." unique_id=1144693068]
 position = Vector2(-286, -92)
 script = ExtResource("2_aclou")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pintu_balik_danjen"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pintu_balik_danjen" unique_id=106270062]
 position = Vector2(-48, 258)
 shape = SubResource("RectangleShape2D_onq7g")
 
-[node name="ItemDrop" parent="." instance=ExtResource("6_5bhdd")]
+[node name="ItemDrop" parent="." unique_id=368247347 instance=ExtResource("6_5bhdd")]
 position = Vector2(501, 59)
 item_id = "healing_potion"
 amount = 10
-icon = ExtResource("7_1urpn")
 
-[node name="Mr_S" parent="." instance=ExtResource("8_watyu")]
+[node name="Mr_S" parent="." unique_id=385944582 instance=ExtResource("8_watyu")]
 position = Vector2(343, -43)
 
 [connection signal="body_entered" from="pintu_balik_danjen" to="pintu_balik_danjen" method="_on_body_entered"]

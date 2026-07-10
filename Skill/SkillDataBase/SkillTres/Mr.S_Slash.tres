@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://bgnjrgfuisohg"]
+
+[ext_resource type="Script" uid="uid://bgl2tuc6qgy2n" path="res://Skill/Core/SkillData.gd" id="1_0r5dw"]
+[ext_resource type="PackedScene" uid="uid://dba8c4pchno7s" path="res://Skill/SkillDataBase/Mr.S_Slash/mr_s_slash.tscn" id="2_dd7vi"]
+
+[resource]
+script = ExtResource("1_0r5dw")
+id = "Mr.S_Slash"
+skill_name = "Slash"
+cooldown = 8.0
+damage = 5.0
+cast_time = 2.0
+range = 4.0
+animation_prefix = "Slash"
+skill_scene = ExtResource("2_dd7vi")
+metadata/_custom_type_script = "uid://bgl2tuc6qgy2n"

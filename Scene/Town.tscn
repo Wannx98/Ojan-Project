@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cqviant801fjp" path="res://Assets/vegetation/Cooking Station.png" id="20_h1wo8"]
 [ext_resource type="Texture2D" uid="uid://bv5kbef8ioftt" path="res://Assets/vegetation/Level_1.png" id="21_awe55"]
 [ext_resource type="PackedScene" uid="uid://dslmw17v1d4eq" path="res://Inventory/Item_Database/Item_Scene(Add drop item)/item_scene.tscn" id="30_0iypy"]
+[ext_resource type="PackedScene" uid="uid://c032tw3us4p6u" path="res://Script/Character/Musuh/Mr.S/mr_s.tscn" id="31_5wssn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g1dhv"]
 texture = ExtResource("1_g1dhv")
@@ -5854,6 +5855,9 @@ position = Vector2(-456, -127)
 
 [node name="ItemDrop" parent="." unique_id=882311792 instance=ExtResource("30_0iypy")]
 position = Vector2(276, -53)
+
+[node name="Mr_S" parent="." unique_id=1970850439 instance=ExtResource("31_5wssn")]
+position = Vector2(161, -53)
 
 [connection signal="body_entered" from="Pintu bar" to="Pintu bar" method="_on_body_entered"]
 [connection signal="body_exited" from="Pintu bar" to="Pintu bar" method="_on_body_exited"]

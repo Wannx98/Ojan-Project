@@ -5,9 +5,11 @@ enum BossState { NORMAL, RAGE }
 
 @export var enemy_id: String = "Mr.S"
 @export var stats: EnemyStats
-
+@onready var skill_manager:SkillManager = $SkillManager
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attackbox: Area2D = $Attackbox
+@export var normal_skills: Array[SkillData]
+@export var rage_skills: Array[SkillData]
 
 signal killed(enemy_id: String)
 
@@ -37,6 +39,7 @@ var last_facing_dir := Vector2.DOWN
 # READY
 # ======================
 func _ready():
+	skill_manager.skill_owner = self  
 	add_to_group("enemy")
 	print("==== BOSS MRS ====")
 	print("ID:", enemy_id)
@@ -48,6 +51,15 @@ func _ready():
 	print("CD:", stats.attack_cooldown)
 	print("RESOURCE ID:", stats.get_instance_id())
 	print("===================")
+	
+	for skill in normal_skills:
+		skill_manager.learn_skill(skill)
+
+	for skill in rage_skills:
+		if !normal_skills.has(skill):
+			skill_manager.learn_skill(skill)
+			
+	print("OWNED SKILLS:", skill_manager.owned_skills.keys()) 
 
 	# 🔥 duplicate biar gak shared
 	stats = stats.duplicate()
@@ -94,19 +106,31 @@ func _physics_process(delta):
 # ======================
 func _normal_behavior():
 	var dist = global_position.distance_to(player.global_position)
+	print("NORMAL BEHAVIOR - dist:", dist, " range:", stats.attack_range, " can_cast:", skill_manager.can_cast("Mr.S_Slash"))
 
 	if dist > stats.attack_range:
 		_chase_player()
 	else:
-		_attack_player()
+		if skill_manager.can_cast("Mr.S_Slash"):
+				skill_manager.cast("Mr.S_Slash")
+		else:
+			_attack_player()
 
 func _rage_behavior():
 	var dist = global_position.distance_to(player.global_position)
+	print("RAGE BEHAVIOR - dist:", dist, " range:", stats.attack_range, " can_cast:", skill_manager.can_cast("Mr.S_Slash"))
 
 	if dist > stats.attack_range:
 		_chase_player()
 	else:
-		_attack_player()
+		if skill_manager.can_cast("Mr.S_Slash"):
+				skill_manager.cast("Mr.S_Slash")
+		elif skill_manager.can_cast("SwordDrop"):   
+			skill_manager.cast("SwordDrop")
+		else:
+			_attack_player()
+		
+
 
 # ======================
 # MOVE
@@ -138,6 +162,19 @@ func _attack_player():
 func _activate_hitbox():
 	attackbox.monitoring = true
 	attackbox.get_node("CollisionShape2D").disabled = false
+
+	await get_tree().create_timer(0.15).timeout
+
+	attackbox.monitoring = false
+	attackbox.get_node("CollisionShape2D").disabled = true
+
+#Hitbox Skill
+func activate_attack_hitbox(damage):
+
+	attackbox.monitoring = true
+	attackbox.get_node("CollisionShape2D").disabled = false
+
+	current_attack = damage
 
 	await get_tree().create_timer(0.15).timeout
 
@@ -179,6 +216,7 @@ func _on_attackbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and is_attacking:
 		body.take_damage(current_attack)
 		print("💥 Boss hit player:", current_attack)
+		
 
 # ======================
 # DAMAGE
