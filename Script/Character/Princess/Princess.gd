@@ -1,7 +1,7 @@
 extends Area2D
-class_name NPC
+class_name Princess_NPC
 
-@export var npc_id: String = "bartender_npc"
+@export var npc_id: String = "Princess"
 @export var dialog_lines: Array[String]
 
 

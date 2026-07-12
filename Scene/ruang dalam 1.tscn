@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://328c6pwmspua"]
+[gd_scene format=3 uid="uid://328c6pwmspua"]
 
 [ext_resource type="Texture2D" uid="uid://cptfs1ugdius0" path="res://Assets/Rumah/Floors.png" id="1_dby3i"]
 [ext_resource type="Texture2D" uid="uid://chswe03miajge" path="res://Assets/Rumah/Props.png" id="2_84b5a"]
@@ -1650,9 +1650,9 @@ sources/2 = SubResource("TileSetAtlasSource_mo03s")
 sources/4 = SubResource("TileSetAtlasSource_kbr67")
 sources/5 = SubResource("TileSetAtlasSource_cqnxo")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=562612935]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=1926503759]
 tile_set = SubResource("TileSet_hlhe3")
 format = 2
 layer_0/name = "Lantai"

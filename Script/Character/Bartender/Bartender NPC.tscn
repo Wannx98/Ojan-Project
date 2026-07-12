@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2at8jy6uo246"]
+[gd_scene format=3 uid="uid://b2at8jy6uo246"]
 
 [ext_resource type="Texture2D" uid="uid://dvhpowanf4spy" path="res://Assets/Bartender_chara.png" id="1_2nx00"]
-[ext_resource type="Script" uid="uid://8w758pnb7ocx" path="res://Script/Character/NPC/Bartender.gd" id="1_8ctxc"]
+[ext_resource type="Script" uid="uid://8w758pnb7ocx" path="res://Script/Character/Bartender/Bartender.gd" id="1_8ctxc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ctxc"]
 atlas = ExtResource("1_2nx00")
@@ -48,20 +48,20 @@ animations = [{
 radius = 13.0
 height = 98.0
 
-[node name="Bartender" type="Node2D"]
+[node name="Bartender" type="Node2D" unique_id=1208389424]
 
-[node name="Area2D" type="Area2D" parent="." groups=["npc"]]
+[node name="Area2D" type="Area2D" parent="." unique_id=1846630967 groups=["npc"]]
 position = Vector2(3, 2)
 script = ExtResource("1_8ctxc")
 dialog_lines = Array[String](["Halo, selamat datang di bar", "kamu petualang ya ", "aku dengar ada sayembara untuk menyelamatkan tuan putri yang di culik ", "katanya dia di culik oleh gerombolanya Mr.S", "kau tau kan Mr.S yang.....", "ya pokoknya itu lah", "kamu pengembara kan?...pasti butuh uang, kamu bisa pergi menyelamatkan tuan putri  untuk mendapatkan hadiahnya ", "kudengar persembunyian Mr.S ada di dalam pertambangan dekat perkebunan pak ical", "hati hati ya bung!!"])
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=1316107883]
 position = Vector2(-1, -8)
 sprite_frames = SubResource("SpriteFrames_5wjao")
 animation = &"speak"
 frame_progress = 0.8269716
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=241054563]
 position = Vector2(0, 33)
 shape = SubResource("CapsuleShape2D_oda3c")
 

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://drys3ofml7fc1"]
+
+[ext_resource type="Script" uid="uid://ckrfshc1cxl8c" path="res://QuestSystem/Data/Quest.gd" id="1_jqcsr"]
+
+[resource]
+script = ExtResource("1_jqcsr")
+id = "talk_princess"
+title = "Bicara dengan Tuan Putri"
+description = "Kamu telah menyelamatkan Tuan Putri, Sepertinya dia ingin memberitahu sesuatu"
+type = "talk"
+target = "Princess"
+metadata/_custom_type_script = "uid://ckrfshc1cxl8c"

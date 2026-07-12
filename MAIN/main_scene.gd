@@ -6,11 +6,11 @@ var current_map : Node = null
 func _ready() -> void:
 	
 	$"/root/Quest_Manager".load_all_quests("res://QuestSystem/Data/QuestList/")
-	$"/root/Quest_Manager".accept_quest("talk_bartender")
+	$"/root/Quest_Manager".accept_quest("Talk_Hunter")
 	
 	
 	# Load map pertama saat game mulai
-	change_map("res://Scene/Town.tscn", "spawnawal")
+	change_map("res://Scene/Map/Arival.tscn", "FirstStep")
 	
 	if inventory_ui != null and $PlayerMC != null:
 		inventory_ui.set_player($PlayerMC)

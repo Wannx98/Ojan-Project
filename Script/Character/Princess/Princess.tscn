@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://binp7v5x6c3s2"]
+
+[ext_resource type="Script" uid="uid://ce6u2t6i5cc3b" path="res://Script/Character/Princess/Princess.gd" id="1_qc4s0"]
+[ext_resource type="Texture2D" uid="uid://b6oojgkqjtg2p" path="res://Script/Character/Princess/prncs.png" id="2_qc4s0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk0d1"]
+atlas = ExtResource("2_qc4s0")
+region = Rect2(0, 0, 256, 231)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wjao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk0d1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"speak",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oda3c"]
+radius = 13.0
+height = 460.0
+
+[node name="Princess" type="Node2D" unique_id=1984053497]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1948928698 groups=["npc"]]
+position = Vector2(3, 2)
+script = ExtResource("1_qc4s0")
+dialog_lines = Array[String](["", "", "", ""])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=545416111]
+position = Vector2(1, -1)
+scale = Vector2(0.18939388, 0.18939388)
+sprite_frames = SubResource("SpriteFrames_5wjao")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1039655023]
+position = Vector2(0, -38)
+shape = SubResource("CapsuleShape2D_oda3c")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

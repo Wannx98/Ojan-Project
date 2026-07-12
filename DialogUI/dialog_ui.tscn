@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cm3e3w7q3s0xl"]
 
 [ext_resource type="Script" uid="uid://mrcgeqni36n2" path="res://DialogUI/dialog_ui.gd" id="1_hf8po"]
-[ext_resource type="Texture2D" uid="uid://c2mds88jtexi2" path="res://Assets/wood_panel.png" id="2_mmbk5"]
+[ext_resource type="Texture2D" uid="uid://bg4ukdajehion" path="res://Assets/UI/Dialog/DIALOG.png" id="2_mmbk5"]
 [ext_resource type="FontFile" uid="uid://cm6bh1gk0an0w" path="res://Assets/Font/Enchanted Land.otf" id="3_mmbk5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmbk5"]

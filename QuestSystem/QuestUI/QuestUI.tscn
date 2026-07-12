@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c0up7ewfsp3dq"]
 
 [ext_resource type="Script" uid="uid://bfe3eyap8q0y3" path="res://QuestSystem/QuestUI/QuestUI.gd" id="1_0fjs1"]
-[ext_resource type="Texture2D" uid="uid://c2mds88jtexi2" path="res://Assets/wood_panel.png" id="2_ngacf"]
+[ext_resource type="Texture2D" uid="uid://ca3guuhdio6fb" path="res://Assets/UI/Dialog/quest.png" id="2_x2b53"]
 [ext_resource type="FontFile" uid="uid://cm6bh1gk0an0w" path="res://Assets/Font/Enchanted Land.otf" id="3_x2b53"]
 [ext_resource type="Texture2D" uid="uid://cr0n67fkla4br" path="res://Assets/UI hias.png" id="3_yokel"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1enoq"]
-texture = ExtResource("2_ngacf")
+texture = ExtResource("2_x2b53")
 texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
@@ -30,10 +30,10 @@ anchor_left = 6.484
 anchor_top = 1.8800001
 anchor_right = 11.893001
 anchor_bottom = 5.7330003
-offset_left = -259.36002
-offset_top = -75.200005
-offset_right = -475.72003
-offset_bottom = -229.32
+offset_left = -263.62402
+offset_top = -121.96001
+offset_right = -479.98407
+offset_bottom = -276.08002
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1enoq")
@@ -60,9 +60,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_x2b53")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=802908291]
-offset_left = 172.0
-offset_top = 156.0
-offset_right = 218.85715
-offset_bottom = 197.0
+offset_left = 193.0
+offset_top = 105.0
+offset_right = 239.85715
+offset_bottom = 146.0
 texture = ExtResource("3_yokel")
 expand_mode = 1
