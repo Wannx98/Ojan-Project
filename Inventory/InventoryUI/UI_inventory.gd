@@ -6,14 +6,37 @@ var slots := []
 
 var player  # Player reference
 
+#SET STATS UI===
+@onready var hp_label = $PlayerStatsUI/Panel/hp_label
+@onready var atk_label = $PlayerStatsUI/Panel/atk_label
+@onready var def_label = $PlayerStatsUI/Panel/def_label
+
 # =====================================================
 # SET PLAYER
 # =====================================================
 func set_player(p):
 	player = p
 	if player:
-		player.connect("inventory_changed", Callable(self, "refresh_ui"))  # Connect signal buat auto-refresh
+		player.connect("inventory_changed", Callable(self, "refresh_ui"))# Connect signal buat auto-refresh
+		player.stats_changed.connect(update_stats)  
 	refresh_ui()
+	update_stats()
+
+func update_stats():
+	if player == null:
+		return
+
+	var stats = player.player_stats
+
+	hp_label.text = "HP : %d / %d" % [
+		stats.health,
+		stats.max_health
+	]
+
+	atk_label.text = "ATK : %d" % stats.get_stat("base_attack")
+	def_label.text = "DEF : %d" % stats.get_stat("base_defense")
+
+
 
 # =====================================================
 # READY
@@ -78,6 +101,7 @@ func return_stack(stack: Resource):
 
 func toggle():
 	visible = !visible
+
 
 # TAMBAHAN: Input buat test manual
 #func _input(event):

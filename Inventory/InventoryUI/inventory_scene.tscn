@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://ca4q272fraccf" path="res://Inventory/InventoryUI/slot.gd" id="3_hfqhc"]
 [ext_resource type="Script" uid="uid://carwkh7vg27nf" path="res://Inventory/InventoryUI/EquipmentSlot.gd" id="5_1ve3x"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kxdri"]
+load_path = "res://.godot/imported/Stats.png-915cb5a359cf58b57eedbba49c385ef0.ctex"
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ww8vw"]
 texture = ExtResource("2_hfqhc")
 
@@ -19,6 +22,14 @@ offset_right = 557.6
 offset_bottom = 494.0
 mouse_filter = 2
 texture = ExtResource("1_jf4nj")
+
+[node name="Stats" type="TextureRect" parent="." unique_id=1857091320]
+offset_left = 5.0
+offset_top = 264.0
+offset_right = 163.0
+offset_bottom = 445.45313
+texture = SubResource("CompressedTexture2D_kxdri")
+expand_mode = 1
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1317128229]
 offset_left = 323.0
@@ -665,19 +676,22 @@ offset_left = -1.0
 offset_right = 30.0
 offset_bottom = 31.0
 
-[node name="PlayerStatsUI" type="Node" parent="." unique_id=2111272931]
+[node name="PlayerStatsUI" type="Control" parent="." unique_id=1972422507]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="Panel" type="VBoxContainer" parent="PlayerStatsUI" unique_id=158022553]
-offset_left = 180.0
-offset_top = 391.0
-offset_right = 214.0
-offset_bottom = 425.0
+[node name="Panel" type="VBoxContainer" parent="PlayerStatsUI" unique_id=422688254]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 271.0
+offset_right = 156.0
+offset_bottom = 438.0
 
-[node name="Label" type="Label" parent="PlayerStatsUI/Panel" unique_id=735444408]
+[node name="hp_label" type="Label" parent="PlayerStatsUI/Panel" unique_id=735444408]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="PlayerStatsUI/Panel" unique_id=1767782513]
+[node name="atk_label" type="Label" parent="PlayerStatsUI/Panel" unique_id=1767782513]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="PlayerStatsUI/Panel" unique_id=65248788]
+[node name="def_label" type="Label" parent="PlayerStatsUI/Panel" unique_id=65248788]
 layout_mode = 2
